@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import httpcore
-httpcore.SyncHTTPTransport = httpcore.AsyncHTTPProxy
 import sys
 import os
 import platform

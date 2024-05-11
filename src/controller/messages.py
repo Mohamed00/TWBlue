@@ -1,25 +1,26 @@
 # -*- coding: utf-8 -*-
 import widgetUtils
 import output
-from extra import translator, SpellChecker
+from extra import SpellChecker
 
 class basicMessage(object):
     def translate(self, event=None):
-        dlg = translator.gui.translateDialog()
-        if dlg.get_response() == widgetUtils.OK:
-            text_to_translate = self.message.text.GetValue()
-            language_dict = translator.translator.available_languages()
-            for k in language_dict:
-                if language_dict[k] == dlg.dest_lang.GetStringSelection():
-                    dst = k
-            msg = translator.translator.translate(text=text_to_translate, target=dst)
-            self.message.text.ChangeValue(msg)
-            self.message.text.SetInsertionPoint(len(self.message.text.GetValue()))
-            self.text_processor()
-            self.message.text.SetFocus()
-            output.speak(_(u"Translated"))
-        else:
-            return
+        pass
+#        dlg = translator.gui.translateDialog()
+#        if dlg.get_response() == widgetUtils.OK:
+#            text_to_translate = self.message.text.GetValue()
+#            language_dict = translator.translator.available_languages()
+#            for k in language_dict:
+#                if language_dict[k] == dlg.dest_lang.GetStringSelection():
+#                    dst = k
+#            msg = translator.translator.translate(text=text_to_translate, target=dst)
+#            self.message.text.ChangeValue(msg)
+#            self.message.text.SetInsertionPoint(len(self.message.text.GetValue()))
+#            self.text_processor()
+#            self.message.text.SetFocus()
+#            output.speak(_(u"Translated"))
+#        else:
+#            return
 
     def text_processor(self, *args, **kwargs):
         pass
