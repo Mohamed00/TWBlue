@@ -3,6 +3,7 @@ access_token = string(default="")
 instance = string(default="")
 user_name = string(default="")
 ignored_clients = list(default=list())
+type = string(default="mastodon")
 
 [general]
 relative_times = boolean(default=True)
