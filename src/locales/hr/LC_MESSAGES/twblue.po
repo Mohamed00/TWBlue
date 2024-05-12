@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TWBlue 0.80\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
-"POT-Creation-Date: 2024-05-05 00:54+0000\n"
+"POT-Creation-Date: 2024-05-12 00:55+0000\n"
 "PO-Revision-Date: 2022-12-20 22:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: hr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
 msgctxt "languageName"
@@ -98,12 +98,12 @@ msgstr "Japanski"
 msgid "User default"
 msgstr "Korisnički zadano"
 
-#: main.py:107
+#: main.py:105
 #, fuzzy
 msgid "https://twblue.mcvsoftware.com/donate"
 msgstr "https://twblue.es/donate"
 
-#: main.py:120
+#: main.py:118
 msgid ""
 "{0} is already running. Close the other instance before starting this "
 "one. If you're sure that {0} isn't running, try deleting the file at {1}."
@@ -235,10 +235,6 @@ msgstr "prijatelji od {}"
 #, fuzzy
 msgid "Following for {}"
 msgstr "pratitelji za {}"
-
-#: controller/messages.py:20
-msgid "Translated"
-msgstr "Prevedeno"
 
 #: controller/settings.py:66
 msgid "System default"
@@ -1678,7 +1674,7 @@ msgstr "izvlači tekst iz slike i pokazuje ga u zasebnom dijaloškom okviru."
 msgid "Adds an alias to an user"
 msgstr "Dodaje alias korisniku"
 
-#: sessionmanager/sessionManager.py:68
+#: sessionmanager/sessionManager.py:69
 msgid "{account_name}@{instance} (Mastodon)"
 msgstr ""
 
@@ -1843,37 +1839,37 @@ msgstr ""
 msgid "{username} wants to follow you."
 msgstr "{username}'ovi pratitelji"
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Please enter your instance URL."
 msgstr ""
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Mastodon instance"
 msgstr ""
 
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 msgid ""
 "We could not connect to your mastodon instance. Please verify that the "
 "domain exists and the instance is accessible via a web browser."
 msgstr ""
 
 # | msgid "&Report an error"
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 #, fuzzy
 msgid "Instance error"
 msgstr "&Prijavi grešku"
 
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 msgid "Enter the verification code"
 msgstr ""
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 #, fuzzy
 msgid "PIN code authorization"
 msgstr "autorizacija"
 
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 msgid ""
 "We could not authorice your mastodon account to be used in TWBlue. This "
 "might be caused due to an incorrect verification code. Please try to add "
@@ -1881,12 +1877,12 @@ msgid ""
 msgstr ""
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 #, fuzzy
 msgid "Authorization error"
 msgstr "autorizacija"
 
-#: sessions/mastodon/session.py:186
+#: sessions/mastodon/session.py:204
 #, python-format
 msgid "%s succeeded."
 msgstr "%s uspjelo."
@@ -4557,4 +4553,7 @@ msgstr "Praćeni"
 
 #~ msgid "&Show tweet"
 #~ msgstr "&Prikaži tweet"
+
+#~ msgid "Translated"
+#~ msgstr "Prevedeno"
 

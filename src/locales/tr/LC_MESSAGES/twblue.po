@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TW Blue 0.80\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
-"POT-Creation-Date: 2024-05-05 00:54+0000\n"
+"POT-Creation-Date: 2024-05-12 00:55+0000\n"
 "PO-Revision-Date: 2022-12-20 22:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: tr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
 #, fuzzy
@@ -108,12 +108,12 @@ msgstr "Japonca"
 msgid "User default"
 msgstr "Kullanıcı varsayılanı"
 
-#: main.py:107
+#: main.py:105
 #, fuzzy
 msgid "https://twblue.mcvsoftware.com/donate"
 msgstr "https://twblue.es/donate"
 
-#: main.py:120
+#: main.py:118
 msgid ""
 "{0} is already running. Close the other instance before starting this "
 "one. If you're sure that {0} isn't running, try deleting the file at {1}."
@@ -245,10 +245,6 @@ msgstr "{} kişisinin arkadaşları"
 #, fuzzy
 msgid "Following for {}"
 msgstr "{} kişisinin takipçileri"
-
-#: controller/messages.py:20
-msgid "Translated"
-msgstr "Mesaj çevirildi"
 
 #: controller/settings.py:66
 #, fuzzy
@@ -1687,7 +1683,7 @@ msgstr "Resimden metni çıkartır ve iletişim kutusunda görüntüler."
 msgid "Adds an alias to an user"
 msgstr "Kullanıcıyı eklemek için liste seçin"
 
-#: sessionmanager/sessionManager.py:68
+#: sessionmanager/sessionManager.py:69
 msgid "{account_name}@{instance} (Mastodon)"
 msgstr ""
 
@@ -1844,37 +1840,37 @@ msgstr ""
 msgid "{username} wants to follow you."
 msgstr "{username} kişisinin takipçileri"
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Please enter your instance URL."
 msgstr ""
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Mastodon instance"
 msgstr ""
 
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 msgid ""
 "We could not connect to your mastodon instance. Please verify that the "
 "domain exists and the instance is accessible via a web browser."
 msgstr ""
 
 # | msgid "&Report an error"
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 #, fuzzy
 msgid "Instance error"
 msgstr "&Hata raporla"
 
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 msgid "Enter the verification code"
 msgstr ""
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 #, fuzzy
 msgid "PIN code authorization"
 msgstr "İzin"
 
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 msgid ""
 "We could not authorice your mastodon account to be used in TWBlue. This "
 "might be caused due to an incorrect verification code. Please try to add "
@@ -1882,12 +1878,12 @@ msgid ""
 msgstr ""
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 #, fuzzy
 msgid "Authorization error"
 msgstr "İzin"
 
-#: sessions/mastodon/session.py:186
+#: sessions/mastodon/session.py:204
 #, python-format
 msgid "%s succeeded."
 msgstr "%s başarılı oldu"
@@ -4493,4 +4489,7 @@ msgstr "&Takibi bırak"
 
 #~ msgid "&Show tweet"
 #~ msgstr "&Tweet göster"
+
+#~ msgid "Translated"
+#~ msgstr "Mesaj çevirildi"
 

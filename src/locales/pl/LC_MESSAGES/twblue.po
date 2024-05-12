@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tw Blue 0.80\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
-"POT-Creation-Date: 2024-05-05 00:54+0000\n"
+"POT-Creation-Date: 2024-05-12 00:55+0000\n"
 "PO-Revision-Date: 2023-04-21 07:45+0000\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
 msgctxt "languageName"
@@ -98,12 +98,12 @@ msgstr "Japoński"
 msgid "User default"
 msgstr "Domyślne dla użytkownika"
 
-#: main.py:107
+#: main.py:105
 #, fuzzy
 msgid "https://twblue.mcvsoftware.com/donate"
 msgstr "https://twblue.es/donate"
 
-#: main.py:120
+#: main.py:118
 msgid ""
 "{0} is already running. Close the other instance before starting this "
 "one. If you're sure that {0} isn't running, try deleting the file at {1}."
@@ -235,10 +235,6 @@ msgstr "przyjaciele dla {}"
 #: controller/mastodon/handler.py:99 controller/mastodon/handler.py:247
 msgid "Following for {}"
 msgstr "Śledzący użytkownika {}"
-
-#: controller/messages.py:20
-msgid "Translated"
-msgstr "Przetłumaczone"
 
 #: controller/settings.py:66
 msgid "System default"
@@ -1640,7 +1636,7 @@ msgstr "Wyodrębnia tekst z obrazu  i wyświetla wynik w oknie dialogowym."
 msgid "Adds an alias to an user"
 msgstr "Dodaje alias do użytkownika"
 
-#: sessionmanager/sessionManager.py:68
+#: sessionmanager/sessionManager.py:69
 msgid "{account_name}@{instance} (Mastodon)"
 msgstr "{account_name}@{instance} (Mastodon)"
 
@@ -1799,15 +1795,15 @@ msgstr "Ankieta, w której głosowałeś wygasła: {status}"
 msgid "{username} wants to follow you."
 msgstr "{username} chcę cie obserwować."
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Please enter your instance URL."
 msgstr "Wprowadź adres URL instancji."
 
-#: sessions/mastodon/session.py:62
+#: sessions/mastodon/session.py:64
 msgid "Mastodon instance"
 msgstr "Instancja Mastodona"
 
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 msgid ""
 "We could not connect to your mastodon instance. Please verify that the "
 "domain exists and the instance is accessible via a web browser."
@@ -1817,20 +1813,20 @@ msgstr ""
 "internetowej."
 
 # | msgid "&Report an error"
-#: sessions/mastodon/session.py:73
+#: sessions/mastodon/session.py:75
 msgid "Instance error"
 msgstr "Błąd instancji"
 
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 msgid "Enter the verification code"
 msgstr "Wprowadź kod weryfikacyjny"
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:78
+#: sessions/mastodon/session.py:80
 msgid "PIN code authorization"
 msgstr "Autoryzacja kodu PIN"
 
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 msgid ""
 "We could not authorice your mastodon account to be used in TWBlue. This "
 "might be caused due to an incorrect verification code. Please try to add "
@@ -1841,11 +1837,11 @@ msgstr ""
 "Spróbuj ponownie dodać sesję."
 
 # | msgid "Authorization"
-#: sessions/mastodon/session.py:87
+#: sessions/mastodon/session.py:89
 msgid "Authorization error"
 msgstr "Błąd autoryzacji"
 
-#: sessions/mastodon/session.py:186
+#: sessions/mastodon/session.py:204
 #, python-format
 msgid "%s succeeded."
 msgstr "%s powiódł się."
@@ -4439,4 +4435,7 @@ msgstr "&Śledzący"
 
 #~ msgid "&Show tweet"
 #~ msgstr "&Pokaż tweet"
+
+#~ msgid "Translated"
+#~ msgstr "Przetłumaczone"
 
