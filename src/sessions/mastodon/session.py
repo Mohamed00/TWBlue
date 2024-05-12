@@ -22,6 +22,7 @@ log = logging.getLogger("sessions.mastodonSession")
 MASTODON_VERSION = "4.0.1"
 
 class Session(base.baseSession):
+    version_check_mode = "created"
 
     def __init__(self, *args, **kwargs):
         super(Session, self).__init__(*args, **kwargs)
@@ -32,6 +33,7 @@ class Session(base.baseSession):
         self.char_limit = 500
         self.post_visibility = "public"
         self.expand_spoilers = False
+        self.software = "mastodon"
         pub.subscribe(self.on_status, "mastodon.status_received")
         pub.subscribe(self.on_status_updated, "mastodon.status_updated")
         pub.subscribe(self.on_notification, "mastodon.notification_received")
@@ -40,7 +42,7 @@ class Session(base.baseSession):
         if self.settings["mastodon"]["access_token"] != None and self.settings["mastodon"]["instance"] != None:
             try:
                 log.debug("Logging in to Mastodon instance {}...".format(self.settings["mastodon"]["instance"]))
-                self.api = mastodon.Mastodon(access_token=self.settings["mastodon"]["access_token"], api_base_url=self.settings["mastodon"]["instance"], mastodon_version=MASTODON_VERSION, user_agent="TWBlue/{}".format(application.version))
+                self.api = mastodon.Mastodon(access_token=self.settings["mastodon"]["access_token"], api_base_url=self.settings["mastodon"]["instance"], mastodon_version=MASTODON_VERSION, user_agent="TWBlue/{}".format(application.version), version_check_mode=self.version_check_mode)
                 if verify_credentials == True:
                     credentials = self.api.account_verify_credentials()
                     self.db["user_name"] = credentials["username"]
@@ -67,7 +69,7 @@ class Session(base.baseSession):
             return
         try:
             client_id, client_secret = mastodon.Mastodon.create_app("TWBlue", api_base_url=authorisation_dialog.GetValue(), website="https://twblue.es")
-            temporary_api = mastodon.Mastodon(client_id=client_id, client_secret=client_secret, api_base_url=instance, mastodon_version=MASTODON_VERSION, user_agent="TWBlue/{}".format(application.version))
+            temporary_api = mastodon.Mastodon(client_id=client_id, client_secret=client_secret, api_base_url=instance, mastodon_version=MASTODON_VERSION, user_agent="TWBlue/{}".format(application.version), version_check_mode="none") # disable version check so we can handle more platforms than Mastodon.
             auth_url = temporary_api.auth_request_url()
         except MastodonError:
             dlg = wx.MessageDialog(None, _("We could not connect to your mastodon instance. Please verify that the domain exists and the instance is accessible via a web browser."), _("Instance error"), wx.ICON_ERROR)
@@ -90,6 +92,13 @@ class Session(base.baseSession):
             return
         self.create_session_folder()
         self.get_configuration()
+        # handle when the instance is GoTosocial.
+        # this might be extended for other activity pub software later on.
+        nodeinfo = temporary_api.instance_nodeinfo()
+        if nodeinfo.software.get("name") == "gotosocial":
+            self.settings["mastodon"]["type"] = nodeinfo.software.get("name")
+            # GoToSocial doesn't support certain buffers so we redefine all of them here.
+            self.settings["general"]["buffer_order"] = ['home', 'local', 'mentions', 'sent', 'favorites', 'bookmarks', 'followers', 'following', 'blocked', 'notifications']
         self.settings["mastodon"]["access_token"] = access_token
         self.settings["mastodon"]["instance"] = instance
         self.settings.write()
@@ -117,11 +126,20 @@ class Session(base.baseSession):
 
     def get_lists(self):
         """ Gets the lists that the user is subscribed to and stores them in the database. Returns None."""
+        if self.software == "gotosocial":
+            self.db["lists"] = []
+            return
         self.db["lists"] = self.api.lists()
 
     def get_muted_users(self):
         ### ToDo: Use a function to retrieve all muted users.
-        self.db["muted_users"] = self.api.mutes()
+        if self.software == "gotosocial":
+            self.db["muted_users"] = []
+            return
+        try:
+            self.db["muted_users"] = self.api.mutes()
+        except MastodonNotFoundError:
+            self.db["muted_users"] = []
 
     def order_buffer(self, name, data, ignore_older=False):
         num = 0
@@ -228,6 +246,8 @@ class Session(base.baseSession):
     def start_streaming(self):
         if self.settings["general"]["disable_streaming"]:
             log.info("Streaming is disabled for session {}. Skipping...".format(self.get_name()))
+            return
+        if self.software == "gotosocial":
             return
         listener = streaming.StreamListener(session_name=self.get_name(), user_id=self.db["user_id"])
         try:

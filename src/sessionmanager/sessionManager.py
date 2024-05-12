@@ -14,6 +14,7 @@ import application
 from pubsub import pub
 from controller import settings
 from sessions.mastodon import session as MastodonSession
+from sessions.gotosocial import session as GotosocialSession
 from . import manager
 from . import wxUI as view
 
@@ -68,7 +69,7 @@ class sessionManagerController(object):
                     name = _("{account_name}@{instance} (Mastodon)").format(account_name=config_test["mastodon"]["user_name"], instance=config_test["mastodon"]["instance"].replace("https://", ""))
                     if config_test["mastodon"]["instance"] != "" and config_test["mastodon"]["access_token"] != "":
                         sessionsList.append(name)
-                        self.sessions.append(dict(type="mastodon", id=i))
+                        self.sessions.append(dict(type=config_test["mastodon"].get("type", "mastodon"), id=i))
                 else:
                     try:
                         log.debug("Deleting session %s" % (i,))
@@ -94,6 +95,8 @@ class sessionManagerController(object):
             # Create the session object based in session type.
             if i.get("type") == "mastodon":
                 s = MastodonSession.Session(i.get("id"))
+            elif i.get("type") == "gotosocial":
+                s = GotosocialSession.Session(i.get("id"))
             s.get_configuration()
             if i.get("id") not in config.app["sessions"]["ignored_sessions"]:
                 try:
@@ -116,7 +119,7 @@ class sessionManagerController(object):
             s = MastodonSession.Session(location)
         result = s.authorise()
         if result == True:
-            self.sessions.append(dict(id=location, type=type))
+            self.sessions.append(dict(id=location, type=s.settings["mastodon"].get("type")))
             self.view.add_new_session_to_list()
 
     def remove_account(self, index):
