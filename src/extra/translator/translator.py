@@ -1,116 +1,61 @@
 # -*- coding: utf-8 -*-
 import logging
-from googletrans import Translator, LANGUAGES
+import threading
+import wx
+import config
+from pubsub import pub
+from . engines import libre_translate, deep_l
+from .wx_ui import translateDialog
 
 log = logging.getLogger("extras.translator")
 
-# create a single translator instance
-# see https://github.com/ssut/py-googletrans/issues/234
-t = None
+class TranslatorController(object):
+    def __init__(self, text):
+        super(TranslatorController, self).__init__()
+        self.text = text
+        self.languages = []
+        self.response = False
+        self.dialog = translateDialog()
+        pub.subscribe(self.on_engine_changed, "translator.engine_changed")
+        if config.app["translator"]["engine"] == "libretranslate":
+            self.dialog.engine_select.SetSelection(0)
+        elif config.app["translator"]["engine"] == "deepl":
+            self.dialog.engine_select.SetSelection(1)
+        threading.Thread(target=self.load_languages).start()
+        if self.dialog.ShowModal() == wx.ID_OK:
+            self.response = True
+            for k in self.language_dict:
+                if self.language_dict[k] == self.dialog.dest_lang.GetStringSelection():
+                    self.target_language= k
+        pub.unsubscribe(self.on_engine_changed, "translator.engine_changed")
 
-def translate(text="", target="en"):
-    global t
-    log.debug("Received translation request for language %s, text=%s" % (target, text))
-    if t == None:
-        t = Translator()
-    vars = dict(text=text, dest=target)
-    return t.translate(**vars).text
+    def load_languages(self):
+        self.language_dict = self.get_languages()
+        self.languages = [self.language_dict[k] for k in self.language_dict]
+        self.dialog.set_languages(self.languages)
 
-supported_langs = None
+    def on_engine_changed(self, engine):
+        if engine == "LibreTranslate":
+            config.app["translator"]["engine"] = engine.lower()
+        elif engine == "DeepL":
+            config.app["translator"]["engine"] = engine.lower()
+        config.app.write()
+        threading.Thread(target=self.load_languages).start()
 
-languages = {
-    "af": _(u"Afrikaans"),
-    "sq": _(u"Albanian"),
-    "am": _(u"Amharic"),
-    "ar": _(u"Arabic"),
-    "hy": _(u"Armenian"),
-    "az": _(u"Azerbaijani"),
-    "eu": _(u"Basque"),
-    "be": _(u"Belarusian"),
-    "bn": _(u"Bengali"),
-    "bh": _(u"Bihari"),
-    "bg": _(u"Bulgarian"),
-    "my": _(u"Burmese"),
-    "ca": _(u"Catalan"),
-    "chr": _(u"Cherokee"),
-    "zh": _(u"Chinese"),
-    "zh-CN": _(u"Chinese_simplified"),
-    "zh-TW": _(u"Chinese_traditional"),
-    "hr": _(u"Croatian"),
-    "cs": _(u"Czech"),
-    "da": _(u"Danish"),
-    "dv": _(u"Dhivehi"),
-    "nl": _(u"Dutch"),
-    "en": _(u"English"),
-    "eo": _(u"Esperanto"),
-    "et": _(u"Estonian"),
-    "tl": _(u"Filipino"),
-    "fi": _(u"Finnish"),
-    "fr": _(u"French"),
-    "gl": _(u"Galician"),
-    "ka": _(u"Georgian"),
-    "de": _(u"German"),
-    "el": _(u"Greek"),
-    "gn": _(u"Guarani"),
-    "gu": _(u"Gujarati"),
-    "iw": _(u"Hebrew"),
-    "hi": _(u"Hindi"),
-    "hu": _(u"Hungarian"),
-    "is": _(u"Icelandic"),
-    "id": _(u"Indonesian"),
-    "iu": _(u"Inuktitut"),
-    "ga": _(u"Irish"),
-    "it": _(u"Italian"),
-    "ja": _(u"Japanese"),
-    "kn": _(u"Kannada"),
-    "kk": _(u"Kazakh"),
-    "km": _(u"Khmer"),
-    "ko": _(u"Korean"),
-    "ku": _(u"Kurdish"),
-    "ky": _(u"Kyrgyz"),
-    "lo": _(u"Laothian"),
-    "lv": _(u"Latvian"),
-    "lt": _(u"Lithuanian"),
-    "mk": _(u"Macedonian"),
-    "ms": _(u"Malay"),
-    "ml": _(u"Malayalam"),
-    "mt": _(u"Maltese"),
-    "mr": _(u"Marathi"),
-    "mn": _(u"Mongolian"),
-    "ne": _(u"Nepali"),
-    "no": _(u"Norwegian"),
-    "or": _(u"Oriya"),
-    "ps": _(u"Pashto"),
-    "fa": _(u"Persian"),
-    "pl": _(u"Polish"),
-    "pt": _(u"Portuguese"),
-    "pa": _(u"Punjabi"),
-    "ro": _(u"Romanian"),
-    "ru": _(u"Russian"),
-    "sa": _(u"Sanskrit"),
-    "sr": _(u"Serbian"),
-    "sd": _(u"Sindhi"),
-    "si": _(u"Sinhalese"),
-    "sk": _(u"Slovak"),
-    "sl": _(u"Slovenian"),
-    "es": _(u"Spanish"),
-    "sw": _(u"Swahili"),
-    "sv": _(u"Swedish"),
-    "tg": _(u"Tajik"),
-    "ta": _(u"Tamil"),
-    "tl": _(u"Tagalog"),
-    "te": _(u"Telugu"),
-    "th": _(u"Thai"),
-    "bo": _(u"Tibetan"),
-    "tr": _(u"Turkish"),
-    "uk": _(u"Ukrainian"),
-    "ur": _(u"Urdu"),
-    "uz": _(u"Uzbek"),
-    "ug": _(u"Uighur"),
-    "vi": _(u"Vietnamese"),
-    "cy": _(u"Welsh"),
-    "yi": _(u"Yiddish")
-}
+    def translate(self):
+        log.debug("Received translation request for language %s, text=%s" % (self.target_language, self.text))
+        if config.app["translator"].get("engine") == "libretranslate":
+            translator = libre_translate.CustomLibreTranslateAPI(config.app["translator"]["translator_api_url"])
+            vars = dict(q=self.text, target=self.target_language)
+            return translator.translate(**vars)
+        elif config.app["translator"]["engine"] == "deepl" and config.app["translator"]["translator_api_key"] != "":
+            return deep_l.translate(text=self.text, target_language=self.target_language)
 
-def available_languages():
-    return dict(sorted(languages.items(), key=lambda x: x[1]))
+    def get_languages(self):
+        languages = {}
+        if config.app["translator"].get("engine") == "libretranslate":
+            translator = libre_translate.CustomLibreTranslateAPI(config.app["translator"]["translator_api_url"])
+            languages = {l.get("code"): l.get("name") for l in translator.languages()}
+        elif config.app["translator"]["engine"] == "deepl" and config.app["translator"]["translator_api_key"] != "":
+            languages = {language.code: language.name for language in deep_l.languages()}
+        return dict(sorted(languages.items(), key=lambda x: x[1]))

@@ -29,3 +29,8 @@ server = string(default="")
 port = integer(default=8080)
 user = string(default="")
 password = string(default="")
+
+[translator]
+engine=string(default="deepl")
+translator_api_url=string(default="https://translate.nvda.es")
+translator_api_key=string(default="")
