@@ -73,7 +73,10 @@ class globalSettingsController(object):
         self.dialog.set_value("proxy", "port", config.app["proxy"]["port"])
         self.dialog.set_value("proxy", "user", config.app["proxy"]["user"])
         self.dialog.set_value("proxy", "password", config.app["proxy"]["password"])
-
+        self.dialog.create_translator_panel()
+        self.dialog.set_value("translator_panel", "libre_api_url", config.app["translator"]["lt_api_url"])
+        self.dialog.set_value("translator_panel", "libre_api_key", config.app["translator"]["lt_api_key"])
+        self.dialog.set_value("translator_panel", "deepL_api_key", config.app["translator"]["deepl_api_key"])
         self.dialog.realize()
         self.response = self.dialog.get_response()
 
@@ -120,4 +123,7 @@ class globalSettingsController(object):
             config.app["proxy"]["port"] = self.dialog.get_value("proxy", "port")
             config.app["proxy"]["user"] = self.dialog.get_value("proxy", "user")
             config.app["proxy"]["password"] = self.dialog.get_value("proxy", "password")
+        config.app["translator"]["lt_api_url"] = self.dialog.get_value("translator_panel", "libre_api_url")
+        config.app["translator"]["lt_api_key"] = self.dialog.get_value("translator_panel", "libre_api_key")
+        config.app["translator"]["deepl_api_key"] = self.dialog.get_value("translator_panel", "deepL_api_key")
         config.app.write()

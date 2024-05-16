@@ -31,6 +31,7 @@ user = string(default="")
 password = string(default="")
 
 [translator]
-engine=string(default="deepl")
-translator_api_url=string(default="https://translate.nvda.es")
-translator_api_key=string(default="")
+engine=string(default="LibreTranslate")
+lt_api_url=string(default="https://translate.nvda.es")
+lt_api_key=string(default="")
+deepl_api_key = string(default="")

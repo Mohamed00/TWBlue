@@ -201,6 +201,30 @@ class other_buffers(wx.Panel):
                 buffers_list.append(self.buffers.get_text_column(i, 0))
         return buffers_list
 
+class TranslatorPanel(wx.Panel, baseDialog.BaseWXDialog):
+    def __init__(self, parent):
+        super(TranslatorPanel, self).__init__(parent)
+
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        lbl_libre_url = wx.StaticText(self, wx.ID_ANY, _(u"LibreTranslate API URL: "))
+        self.libre_api_url = wx.TextCtrl(self, wx.ID_ANY)
+        libreUrlBox = wx.BoxSizer(wx.HORIZONTAL)
+        libreUrlBox.Add(lbl_libre_url, 0, wx.ALL, 5)
+        libreUrlBox.Add(self.libre_api_url, 1, wx.ALL | wx.EXPAND, 5)
+        sizer.Add(libreUrlBox, 0, wx.ALL | wx.EXPAND, 5)
+        lbl_libre_api_key = wx.StaticText(self, wx.ID_ANY, _(u"LibreTranslate API Key (optional): "))
+        self.libre_api_key = wx.TextCtrl(self, wx.ID_ANY)
+        libreApiKeyBox = wx.BoxSizer(wx.HORIZONTAL)
+        libreApiKeyBox.Add(lbl_libre_api_key, 0, wx.ALL, 5)
+        libreApiKeyBox.Add(self.libre_api_key, 1, wx.ALL | wx.EXPAND, 5)
+        sizer.Add(libreApiKeyBox, 0, wx.ALL | wx.EXPAND, 5)
+        lbl_deepL_api_key = wx.StaticText(self, wx.ID_ANY, _(u"DeepL API Key: "))
+        self.deepL_api_key = wx.TextCtrl(self, wx.ID_ANY)
+        deepLApiKeyBox = wx.BoxSizer(wx.HORIZONTAL)
+        deepLApiKeyBox.Add(lbl_deepL_api_key, 0, wx.ALL, 5)
+        deepLApiKeyBox.Add(self.deepL_api_key, 1, wx.ALL | wx.EXPAND, 5)
+        sizer.Add(deepLApiKeyBox, 0, wx.ALL | wx.EXPAND, 5)
+        self.SetSizer(sizer)
 class configurationDialog(baseDialog.BaseWXDialog):
     def set_title(self, title):
         self.SetTitle(title)
@@ -220,6 +244,10 @@ class configurationDialog(baseDialog.BaseWXDialog):
     def create_proxy(self, proxyTypes):
         self.proxy = proxy(self.notebook, proxyTypes)
         self.notebook.AddPage(self.proxy, _(u"Proxy"))
+
+    def create_translator_panel(self):
+        self.translator_panel= TranslatorPanel(self.notebook)
+        self.notebook.AddPage(self.translator_panel, _("Translation services"))
 
     def realize(self):
         self.sizer.Add(self.notebook, 0, wx.ALL, 5)
