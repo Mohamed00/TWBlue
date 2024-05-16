@@ -846,7 +846,14 @@ class Controller(object):
 
     def register_invisible_keyboard_shorcuts(self, keymap):
         if config.changed_keymap:
-            commonMessageDialogs.changed_keymap()
+            build_number = sys.getwindowsversion().build
+            if build_number > 22000:
+                system = "Windows 11"
+                keystroke_editor_shortcut = "Control+Win+Alt+K"
+            else:
+                system = "Windows 10"
+                keystroke_editor_shortcut = "Win+Alt+K"
+            commonMessageDialogs.changed_keymap(system, keystroke_editor_shortcut)
         # Make sure we pass a keymap without undefined keystrokes.
         new_keymap = {key: keymap[key] for key in keymap.keys() if keymap[key] != ""}
         self.keyboard_handler = WXKeyboardHandler(self.view)

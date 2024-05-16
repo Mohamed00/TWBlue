@@ -29,8 +29,8 @@ def donation():
     dlg = wx.MessageDialog(None, _(u"If you like {0} we need your help to keep it going. Help us by donating to the project. This will help us pay for the server, the domain and some other things to ensure that {0} will be actively maintained. Your donation will give us the means to continue the development of {0}, and to keep {0} free. Would you like to donate now?").format(application.name), _(u"We need your help"), wx.ICON_QUESTION|wx.YES_NO)
     return dlg.ShowModal()
 
-def changed_keymap():
-    return wx.MessageDialog(None, _(u"TWBlue has detected that you're running windows 10 and has changed the default keymap to the Windows 10 keymap. It means that some keyboard shorcuts could be different. Please check the keystroke editor by pressing Alt+Win+K to see all available keystrokes for this keymap."), _(u"Information"), wx.OK).ShowModal()
+def changed_keymap(system, keystroke_editor_shortcut):
+    return wx.MessageDialog(None, _(f"TWBlue has detected that you're running {system} and has changed the default keymap to the {system} keymap. It means that some keyboard shorcuts could be different. Please check the keystroke editor by pressing {keystroke_editor_shortcut} to see all available keystrokes for this keymap."), _(u"Information"), wx.OK).ShowModal()
 
 def invalid_configuration():
     return wx.MessageDialog(None, _("The configuration file is invalid."), _("Error"), wx.ICON_ERROR).ShowModal()

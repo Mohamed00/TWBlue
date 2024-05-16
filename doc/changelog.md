@@ -3,8 +3,9 @@ TWBlue Changelog
 ## changes in this version
 
 * Core:
-    * Added Initial Support to GoToSocial.
+    * Added Initial Support to GoToSocial. Some features are not fully implemented yet, although GoToXocial instances should be able to be used as normal sessions in TWBlue. Streaming, poll options and markdown are not supported but planned for the near future.
     * The translation module has been rewritten. Now, instead of offering translations with Google Translator, the user can choose between [LibreTranslate,](https://github.com/LibreTranslate/LibreTranslate) which requires no configuration thanks to the [instance of the NVDA Spanish community;](https://translate.nvda.es) or translate using [DeepL,](https://deepl.com) for which it is necessary to create an account on DeepL and [subscribe to a DeepL API Free plan](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-Free) to obtain the API key which can be used to translate up to 500000 characters every month. The API key can be entered in the global options dialog, under a new tab called translation services. When translating a text, the translation engine can be changed. When changing the translation engine, the target language must be selected again before translation takes place.
+    * TWBlue should be able to switch to Windows 11 Keymap when running under Windows 11. ([#494](https://github.com/mcv-software/twblue/issues/494))
 * Mastodon:
     * Fixed an error that caused TWBlue to be unable to properly display the user action dialog from the followers or following buffer. ([#575](https://github.com/mcv-software/twblue/issues/575))
 

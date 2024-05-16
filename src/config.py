@@ -1,5 +1,6 @@
 # -*- coding: cp1252 -*-
 import os
+import sys
 import config_utils
 import paths
 import logging
@@ -21,7 +22,10 @@ def setup ():
     log.debug("Loading keymap...")
     global keymap
     if float(platform.version()[:2]) >= 10 and app["app-settings"]["load_keymap"] == "default.keymap":
-        app["app-settings"]["load_keymap"] = "Windows 10.keymap"
+        if sys.getwindowsversion().build > 22000:
+            app["app-settings"]["load_keymap"] = "Windows11.keymap"
+        else:
+            app["app-settings"]["load_keymap"] = "Windows 10.keymap"
         app.write()
         global changed_keymap
         changed_keymap = True
