@@ -362,15 +362,22 @@ class Handler(object):
         dlg = showUserProfile.ShowUserProfile(user)
         dlg.ShowModal()
 
-    def new_community_buffer(self, buffer, *args, **kwargs):
+    def new_community_buffer(self, controller, buffer):
         dlg = communityTimeline.CommunityTimeline()
         if dlg.ShowModal() != wx.ID_OK:
             return
         url = dlg.url.GetValue()
         bufftype = dlg.get_action()
+        if bufftype == "local":
+            title = _(f"Local timeline for {url}")
+        else:
+            title = _(f"Federated timeline for {url}")
+            bufftype = "public"
         dlg.Destroy()
         tl_info = f"{bufftype}@{url}"
         if tl_info in buffer.session.settings["other_buffers"]["communities"]:
             return # buffer already exists.
         buffer.session.settings["other_buffers"]["communities"].append(tl_info)
         buffer.session.settings.write()
+        communities_position =controller.view.search("communities", buffer.session.get_name())
+        pub.sendMessage("createBuffer", buffer_type="CommunityBuffer", session_type=buffer.session.type, buffer_title=title, parent_tab=communities_position, start=True, kwargs=dict(parent=controller.view.nb, function="timeline", name=tl_info, sessionObject=buffer.session, account=buffer.session.get_name(), sound="tweet_timeline.ogg", community_url=url, timeline=bufftype))
