@@ -8,6 +8,7 @@ TWBlue Changelog
     * TWBlue should be able to switch to Windows 11 Keymap when running under Windows 11. ([#494](https://github.com/mcv-software/twblue/issues/494))
 * Mastodon:
     * When viewing a post, a button displays the number of boosts and times it has been added to favorites. Clicking on that button will open a list of users who have interacted with the post. From that list, it is possible to view profiles and perform common user actions.
+    * Now it is possible to mute conversations in Mastodon sessions. To do this, there is a button that can be called "Mute" or "Unmute Conversation" in the dialog to display the post. Conversations that have been muted will not generate notifications or mentions when they receive new replies. Only conversations that you are a part of can be muted.
     * Fixed an error that caused TWBlue to be unable to properly display the user action dialog from the followers or following buffer. ([#575](https://github.com/mcv-software/twblue/issues/575))
 
 ## changes in version 2024.01.05

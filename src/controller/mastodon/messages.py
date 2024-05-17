@@ -6,6 +6,7 @@ import widgetUtils
 import config
 import output
 from twitter_text import parse_tweet, config
+from mastodon import MastodonError
 from controller import messages
 from sessions.mastodon import templates
 from wxUI.dialogs.mastodon import postDialogs
@@ -257,6 +258,13 @@ class viewPost(post):
         else:
             source = source_obj.get("name")
         self.message = postDialogs.viewPost(text=text, boosts_count=boost_count, favs_count=favs_count, source=source, date=date, privacy=privacy)
+        participants = [post.account.id] + [account.id for account in post.mentions]
+        print(post, participants)
+        if self.session.db["user_id"] in participants:
+            self.message.mute.Enable(True)
+            if post.muted:
+                self.message.mute.SetLabel(_("Unmute conversation"))
+            widgetUtils.connect_event(self.message.mute, widgetUtils.BUTTON_PRESSED, self.mute_unmute)
         self.message.SetTitle(title)
         if image_description != "":
             self.message.image_description.Enable(True)
@@ -274,6 +282,24 @@ class viewPost(post):
     # We won't need text_processor in this dialog, so let's avoid it.
     def text_processor(self):
         pass
+
+    def mute_unmute(self, *args, **kwargs):
+        post = self.session.api.status(self.post_id)
+        if post.muted == True:
+            action = "status_unmute"
+            new_label = _("Mute conversation")
+            msg = _("Conversation unmuted.")
+        else:
+            action = "status_mute"
+            new_label = _("Unmute conversation")
+            msg = _("Conversation muted.")
+        try:
+            getattr(self.session.api, action)(self.post_id)
+            self.message.mute.SetLabel(new_label)
+            output.speak(msg)
+        except MastodonError:
+            return
+
 
     def on_boosts(self, *args, **kwargs):
         users = self.session.api.status_reblogged_by(self.post_id)

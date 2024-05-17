@@ -228,12 +228,15 @@ class viewPost(wx.Dialog):
 
     def create_buttons_section(self, panel):
         sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.mute = wx.Button(panel, wx.ID_ANY, _("Mute conversation"))
+        self.mute.Enable(False)
         self.share = wx.Button(panel, wx.ID_ANY, _("Copy link to clipboard"))
         self.share.Enable(False)
         self.spellcheck = wx.Button(panel, wx.ID_ANY, _("Check &spelling..."))
         self.translateButton = wx.Button(panel, wx.ID_ANY, _("&Translate..."))
         cancelButton = wx.Button(panel, wx.ID_CANCEL, _("C&lose"))
         cancelButton.SetDefault()
+        sizer.Add(self.mute, 0, wx.ALL, 5)
         sizer.Add(self.share, 0, wx.ALL, 5)
         sizer.Add(self.spellcheck, 0, wx.ALL, 5)
         sizer.Add(self.translateButton, 0, wx.ALL, 5)
