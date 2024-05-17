@@ -10,6 +10,7 @@ from controller import messages
 from sessions.mastodon import templates
 from wxUI.dialogs.mastodon import postDialogs
 from extra.autocompletionUsers import completion
+from . import userList
 
 def character_count(post_text, post_cw, character_limit=500):
     # We will use text for counting character limit only.
@@ -235,9 +236,11 @@ class post(messages.basicMessage):
         self.message.visibility.SetSelection(setting)
 
 class viewPost(post):
-    def __init__(self, post, offset_hours=0, date="", item_url=""):
+    def __init__(self, session, post, offset_hours=0, date="", item_url=""):
+        self.session = session
         if post.reblog != None:
             post = post.reblog
+        self.post_id = post.id
         author = post.account.display_name if post.account.display_name != "" else post.account.username
         title = _(u"Post from {}").format(author)
         image_description = templates.process_image_descriptions(post.media_attachments)
@@ -264,11 +267,23 @@ class viewPost(post):
             widgetUtils.connect_event(self.message.share, widgetUtils.BUTTON_PRESSED, self.share)
             self.item_url = item_url
         widgetUtils.connect_event(self.message.translateButton, widgetUtils.BUTTON_PRESSED, self.translate)
+        widgetUtils.connect_event(self.message.boosts_button, widgetUtils.BUTTON_PRESSED, self.on_boosts)
+        widgetUtils.connect_event(self.message.favorites_button, widgetUtils.BUTTON_PRESSED, self.on_favorites)
         self.message.ShowModal()
 
     # We won't need text_processor in this dialog, so let's avoid it.
     def text_processor(self):
         pass
+
+    def on_boosts(self, *args, **kwargs):
+        users = self.session.api.status_reblogged_by(self.post_id)
+        title = _("people who boosted this post")
+        user_list = userList.MastodonUserList(session=self.session, users=users, title=title)
+
+    def on_favorites(self, *args, **kwargs):
+        users = self.session.api.status_favourited_by(self.post_id)
+        title = _("people who favorited this post")
+        user_list = userList.MastodonUserList(session=self.session, users=users, title=title)
 
     def share(self, *args, **kwargs):
         if hasattr(self, "item_url"):
