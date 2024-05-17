@@ -10,7 +10,7 @@ from wxUI.dialogs.mastodon import dialogs
 from wxUI.dialogs import userAliasDialogs
 from wxUI import commonMessageDialogs
 from wxUI.dialogs.mastodon import updateProfile as update_profile_dialogs
-from wxUI.dialogs.mastodon import showUserProfile
+from wxUI.dialogs.mastodon import showUserProfile, communityTimeline
 from sessions.mastodon.utils import html_filter
 from . import userActions, settings
 
@@ -48,7 +48,7 @@ class Handler(object):
             details=_("Show user profile"),
             favs=None,
             # In buffer Menu.
-            trends=None,
+            new_community_buffer=_("New community buffer"),
             filter=None,
             manage_filters=None
         )
@@ -105,6 +105,8 @@ class Handler(object):
         searches_position =controller.view.search("searches", name)
         for term in session.settings["other_buffers"]["post_searches"]:
             pub.sendMessage("createBuffer", buffer_type="SearchBuffer", session_type=session.type, buffer_title=_("Search for {}").format(term), parent_tab=searches_position, start=True, kwargs=dict(parent=controller.view.nb, compose_func="compose_post", function="search", name="%s-searchterm" % (term,), sessionObject=session, account=session.get_name(), sound="search_updated.ogg", q=term, result_type="statuses"))
+        pub.sendMessage("createBuffer", buffer_type="EmptyBuffer", session_type="base", buffer_title=_("Communities"), parent_tab=root_position, start=False, kwargs=dict(parent=controller.view.nb, name="communities", account=name))
+        communities_position =controller.view.search("communities", name)
 #        for i in session.settings["other_buffers"]["trending_topic_buffers"]:
 #            pub.sendMessage("createBuffer", buffer_type="TrendsBuffer", session_type=session.type, buffer_title=_("Trending topics for %s") % (i), parent_tab=root_position, start=False, kwargs=dict(parent=controller.view.nb, name="%s_tt" % (i,), sessionObject=session, name, trendsFor=i, sound="trends_updated.ogg"))
 
@@ -359,3 +361,16 @@ class Handler(object):
                 user = buffer.session.api.account(selectedUser[-1])
         dlg = showUserProfile.ShowUserProfile(user)
         dlg.ShowModal()
+
+    def new_community_buffer(self, buffer, *args, **kwargs):
+        dlg = communityTimeline.CommunityTimeline()
+        if dlg.ShowModal() != wx.ID_OK:
+            return
+        url = dlg.url.GetValue()
+        bufftype = dlg.get_action()
+        dlg.Destroy()
+        tl_info = f"{bufftype}@{url}"
+        if tl_info in buffer.session.settings["other_buffers"]["communities"]:
+            return # buffer already exists.
+        buffer.session.settings["other_buffers"]["communities"].append(tl_info)
+        buffer.session.settings.write()

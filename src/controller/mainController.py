@@ -153,6 +153,7 @@ class Controller(object):
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.toggle_buffer_mute, self.view.mute_buffer)
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.open_timeline, self.view.timeline)
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.open_favs_timeline, self.view.favs)
+        widgetUtils.connect_event(self.view, widgetUtils.MENU, self.new_community_buffer, self.view.new_community_buffer)
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.open_conversation, menuitem=self.view.view_conversation)
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.seekLeft, menuitem=self.view.seekLeft)
         widgetUtils.connect_event(self.view, widgetUtils.MENU, self.seekRight, menuitem=self.view.seekRight)
@@ -1148,3 +1149,9 @@ class Controller(object):
         handler = self.get_handler(type=buffer.session.type)
         if handler and hasattr(handler, 'openFollowingTimeline'):
             handler.openFollowingTimeline(self, buffer, user)
+
+    def new_community_buffer(self, *args, user=None):
+        buffer = self.get_best_buffer()
+        handler = self.get_handler(type=buffer.session.type)
+        if handler and hasattr(handler, 'new_community_buffer'):
+            handler.new_community_buffer(self, buffer)

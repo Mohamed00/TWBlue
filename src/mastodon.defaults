@@ -30,6 +30,7 @@ indicate_img = boolean(default=True)
 [other_buffers]
 timelines = list(default=list())
 searches = list(default=list())
+communities = list(default=list())
 lists = list(default=list())
 followers_timelines = list(default=list())
 following_timelines =  list(default=list())
