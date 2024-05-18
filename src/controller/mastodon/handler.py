@@ -50,7 +50,7 @@ class Handler(object):
             details=_("Show user profile"),
             favs=None,
             # In buffer Menu.
-            new_community_buffer=_("New community buffer"),
+            community_timeline =_("Create community timeline"),
             filter=None,
             manage_filters=None
         )
@@ -367,7 +367,7 @@ class Handler(object):
         dlg = showUserProfile.ShowUserProfile(user)
         dlg.ShowModal()
 
-    def new_community_buffer(self, controller, buffer):
+    def community_timeline(self, controller, buffer):
         dlg = communityTimeline.CommunityTimeline()
         if dlg.ShowModal() != wx.ID_OK:
             return

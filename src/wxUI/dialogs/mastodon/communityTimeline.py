@@ -6,7 +6,7 @@ class CommunityTimeline(wx.Dialog):
         super(CommunityTimeline, self).__init__(parent=None, *args, **kwargs)
         panel = wx.Panel(self)
         communitySizer = wx.BoxSizer()
-        self.SetTitle(_("Create community buffer"))
+        self.SetTitle(_("Create community timeline"))
         communityLabel = wx.StaticText(panel, -1, _("Community URL"))
         self.url = wx.TextCtrl(panel, -1)
         self.url.SetFocus()

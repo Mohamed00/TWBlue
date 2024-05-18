@@ -52,7 +52,7 @@ class mainFrame(wx.Frame):
         # buffer menu
         self.menubar_buffer = wx.Menu()
         self.update_buffer = self.menubar_buffer.Append(wx.ID_ANY, _(u"&Update buffer"))
-        self.new_community_buffer= self.menubar_buffer.Append(wx.ID_ANY, _("New community buffer"))
+        self.community_timeline = self.menubar_buffer.Append(wx.ID_ANY, _("Create community timeline"))
         self.trends = self.menubar_buffer.Append(wx.ID_ANY, _(u"New &trending topics buffer..."))
         self.filter = self.menubar_buffer.Append(wx.ID_ANY, _(u"Create a &filter"))
         self.manage_filters = self.menubar_buffer.Append(wx.ID_ANY, _(u"&Manage filters"))
