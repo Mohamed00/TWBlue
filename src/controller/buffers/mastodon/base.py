@@ -591,8 +591,11 @@ class BaseBuffer(base.Buffer):
         response = viewer.message.ShowModal()
         viewer.message.Destroy()
 
-    def vote(self):
-        post = self.get_item()
+    def vote(self, item=None):
+        if item == None:
+            post = self.get_item()
+        else:
+            post = item
         if not hasattr(post, "poll") or post.poll == None:
             return
         poll = post.poll
