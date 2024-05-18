@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import wx
 import logging
+import mastodon
 import output
+from mastodon import MastodonError
 from pubsub import pub
 from mysc import restart
 from mysc.thread_utils import call_threaded
@@ -371,8 +373,14 @@ class Handler(object):
             return
         url = dlg.url.GetValue()
         bufftype = dlg.get_action()
+        local_api = mastodon.Mastodon(api_base_url=url)
+        try:
+            instance = local_api.instance()
+        except MastodonError:
+            commonMessageDialogs.invalid_instance()
+            return
         if bufftype == "local":
-            title = _(f"Local timeline for {url}")
+            title = _(f"Local timeline for {url.replace('https://', '')}")
         else:
             title = _(f"Federated timeline for {url}")
             bufftype = "public"

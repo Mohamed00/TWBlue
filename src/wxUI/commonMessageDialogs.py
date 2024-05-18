@@ -44,3 +44,6 @@ def cant_update_source() -> wx.MessageDialog:
     """
     dlg = wx.MessageDialog(None, _("Sorry, you can't update while running {} from source.").format(application.name), _("Error"), wx.OK)
     return dlg.ShowModal()
+
+def invalid_instance():
+    return wx.MessageDialog(None, _("the provided instance is invalid. Please try again."), _("Invalid instance"), wx.ICON_ERROR).ShowModal()
