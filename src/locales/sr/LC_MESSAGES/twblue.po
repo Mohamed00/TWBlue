@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TwBlue 0.80\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
-"POT-Creation-Date: 2024-05-12 00:55+0000\n"
+"POT-Creation-Date: 2024-05-19 00:54+0000\n"
 "PO-Revision-Date: 2023-06-21 22:45+0000\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language: sr\n"
@@ -122,13 +122,13 @@ msgstr "Reprodukujem..."
 msgid "Stopped."
 msgstr "Zaustavljeno."
 
-#: controller/mainController.py:258
+#: controller/mainController.py:259
 msgid "Ready"
 msgstr "Spreman"
 
-#: controller/mainController.py:366 controller/mainController.py:651
-#: controller/mainController.py:670 controller/mainController.py:689
-#: controller/mainController.py:708
+#: controller/mainController.py:367 controller/mainController.py:652
+#: controller/mainController.py:671 controller/mainController.py:690
+#: controller/mainController.py:709
 msgid ""
 "No session is currently in focus. Focus a session with the next or "
 "previous session shortcut."
@@ -136,103 +136,108 @@ msgstr ""
 "Trenutno nijedna sesija nije u fokusu. Fokusirajte neku pritiskom na "
 "prečicu za prethodnu ili sledeću."
 
-#: controller/mainController.py:370
+#: controller/mainController.py:371
 msgid "Empty buffer."
 msgstr "Prazan kanal."
 
-#: controller/mainController.py:377
+#: controller/mainController.py:378
 msgid "{0} not found."
 msgstr "{0} nije pronađen."
 
-#: controller/mainController.py:699 controller/mainController.py:718
+#: controller/mainController.py:700 controller/mainController.py:719
 #, python-format
 msgid "%s, %s of %s"
 msgstr "%s, %s od %s"
 
-#: controller/mainController.py:701 controller/mainController.py:720
-#: controller/mainController.py:748 controller/mainController.py:776
+#: controller/mainController.py:702 controller/mainController.py:721
+#: controller/mainController.py:749 controller/mainController.py:777
 #, python-format
 msgid "%s. Empty"
 msgstr "%s. Prazno"
 
-#: controller/mainController.py:736 controller/mainController.py:740
-#: controller/mainController.py:764
+#: controller/mainController.py:737 controller/mainController.py:741
+#: controller/mainController.py:765
 msgid "{0}: This account is not logged into Twitter."
 msgstr "{0}: Ovaj nalog nije prijavljen na twitter."
 
-#: controller/mainController.py:746 controller/mainController.py:774
+#: controller/mainController.py:747 controller/mainController.py:775
 #, python-format
 msgid "%s. %s, %s of %s"
 msgstr "%s. %s, %s od %s"
 
-#: controller/mainController.py:768
+#: controller/mainController.py:769
 msgid "{0}: This account is not logged into twitter."
 msgstr "{0}: Ovaj nalog nije prijavljen na twitter."
 
-#: controller/mainController.py:900 controller/mainController.py:916
+#: controller/mainController.py:908 controller/mainController.py:924
 msgid "An error happened while trying to connect to the server. Please try later."
 msgstr ""
 "Došlo je do greške pri pokušaju povezivanja na server. Molimo pokušajte "
 "kasnije."
 
-#: controller/mainController.py:947
+#: controller/mainController.py:955
 msgid "The auto-reading of new tweets is enabled for this buffer"
 msgstr "Automatsko čitanje novih tvitova je uključeno na ovom kanalu"
 
-#: controller/mainController.py:950
+#: controller/mainController.py:958
 msgid "The auto-reading of new tweets is disabled for this buffer"
 msgstr "Automatsko čitanje tvitova je isključeno za tvitove na ovom kanalu"
 
-#: controller/mainController.py:957
+#: controller/mainController.py:965
 msgid "Session mute on"
 msgstr "Utišavanje sesije uključeno"
 
-#: controller/mainController.py:960
+#: controller/mainController.py:968
 msgid "Session mute off"
 msgstr "Utišavanje sesije isključeno"
 
-#: controller/mainController.py:969
+#: controller/mainController.py:977
 msgid "Buffer mute on"
 msgstr "Utišavanje kanala uključeno"
 
-#: controller/mainController.py:972
+#: controller/mainController.py:980
 msgid "Buffer mute off"
 msgstr "Utišavanje kanala isključeno"
 
-#: controller/mainController.py:989
+#: controller/mainController.py:997
 msgid "Copied"
 msgstr "Kopirano"
 
-#: controller/mainController.py:1009
+#: controller/mainController.py:1017
 msgid "Unable to update this buffer."
 msgstr "Ne mogu da ažuriram ovaj kanal."
 
-#: controller/mainController.py:1011
+#: controller/mainController.py:1019
 msgid "Updating buffer..."
 msgstr "Ažuriram kanal..."
 
-#: controller/mainController.py:1014
+#: controller/mainController.py:1022
 msgid "{0} items retrieved"
 msgstr "{0} primljenih stavki"
 
-#: controller/buffers/mastodon/base.py:122 controller/mainController.py:1018
-#: controller/mastodon/handler.py:95 controller/mastodon/handler.py:219
+#: controller/buffers/mastodon/base.py:122 controller/mainController.py:1026
+#: controller/mastodon/handler.py:97 controller/mastodon/handler.py:226
 msgid "Timeline for {}"
 msgstr "Vremenska linija od {}"
 
-#: controller/buffers/mastodon/users.py:93 controller/mainController.py:1020
-#: controller/mastodon/handler.py:97 controller/mastodon/handler.py:233
+#: controller/buffers/mastodon/users.py:93 controller/mainController.py:1028
+#: controller/mastodon/handler.py:99 controller/mastodon/handler.py:240
 msgid "Followers for {}"
 msgstr "Pratioci od {}"
 
-#: controller/mainController.py:1022
+#: controller/mainController.py:1030
 msgid "Friends for {}"
 msgstr "Prijatelji od {}"
 
-#: controller/buffers/mastodon/users.py:95 controller/mainController.py:1024
-#: controller/mastodon/handler.py:99 controller/mastodon/handler.py:247
+#: controller/buffers/mastodon/users.py:95 controller/mainController.py:1032
+#: controller/mastodon/handler.py:101 controller/mastodon/handler.py:254
 msgid "Following for {}"
 msgstr "Praćenja za {}"
+
+#: controller/messages.py:18
+#, fuzzy
+msgid "Translated"
+msgstr "&Prevedi"
 
 #: controller/settings.py:66
 msgid "System default"
@@ -268,66 +273,68 @@ msgstr "Uredi nadimak za {}"
 msgid "This action is not supported for this buffer"
 msgstr "Ova radnja nije podržana na ovom kanalu"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:67
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:69
 #: controller/mastodon/settings.py:194
 msgid "Home"
 msgstr "Početak"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:69
-#: controller/mastodon/settings.py:195
+#: controller/buffers/mastodon/base.py:52
+#: controller/buffers/mastodon/community.py:22
+#: controller/mastodon/handler.py:71 controller/mastodon/settings.py:195
 msgid "Local"
 msgstr "Lokalna"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:71
-#: controller/mastodon/settings.py:196
+#: controller/buffers/mastodon/base.py:52
+#: controller/buffers/mastodon/community.py:22
+#: controller/mastodon/handler.py:73 controller/mastodon/settings.py:196
 msgid "Federated"
 msgstr "Javna"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:73
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:75
 #: controller/mastodon/settings.py:197
 msgid "Mentions"
 msgstr "Spominjanja"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:81
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:83
 #: controller/mastodon/settings.py:201
 msgid "Bookmarks"
 msgstr "Markeri"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:75
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:77
 msgid "Direct messages"
 msgstr "Direktne Poruke"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:77
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:79
 #: controller/mastodon/settings.py:199
 msgid "Sent"
 msgstr "Poslato"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:79
-#: controller/mastodon/settings.py:200
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:81
+#: controller/mastodon/settings.py:200 wxUI/dialogs/mastodon/postDialogs.py:223
 msgid "Favorites"
 msgstr "Omiljeni"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:83
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:85
 #: controller/mastodon/settings.py:202
 msgid "Followers"
 msgstr "Pratioci"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:85
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:87
 #: controller/mastodon/settings.py:203
 msgid "Following"
 msgstr "Praćenja"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:89
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:91
 #: controller/mastodon/settings.py:204
 msgid "Blocked users"
 msgstr "Blokirani korisnici"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:87
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:89
 #: controller/mastodon/settings.py:205
 msgid "Muted users"
 msgstr "Utišani korisnici"
 
-#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:91
+#: controller/buffers/mastodon/base.py:52 controller/mastodon/handler.py:93
 #: controller/mastodon/settings.py:206
 msgid "Notifications"
 msgstr "Obaveštenja"
@@ -349,16 +356,16 @@ msgid "Unknown buffer"
 msgstr "Nepoznat kanal"
 
 #: controller/buffers/mastodon/base.py:67
-#: controller/buffers/mastodon/base.py:620 wxUI/buffers/mastodon/base.py:24
+#: controller/buffers/mastodon/base.py:623 wxUI/buffers/mastodon/base.py:24
 #: wxUI/buffers/mastodon/conversationList.py:24
 #: wxUI/buffers/mastodon/notifications.py:22 wxUI/buffers/mastodon/user.py:18
 #: wxUI/dialogs/mastodon/postDialogs.py:4
-#: wxUI/dialogs/mastodon/postDialogs.py:174 wxUI/sysTrayIcon.py:35
+#: wxUI/dialogs/mastodon/postDialogs.py:188 wxUI/sysTrayIcon.py:35
 msgid "Post"
 msgstr "Objava"
 
 #: controller/buffers/mastodon/base.py:68
-#: controller/buffers/mastodon/base.py:621
+#: controller/buffers/mastodon/base.py:624
 msgid "Write your post here"
 msgstr "Otkucajte vašu objavu ovde"
 
@@ -371,6 +378,7 @@ msgid "{0} new posts in {1}."
 msgstr "{0} novih objava u kanalu {1}."
 
 #: controller/buffers/mastodon/base.py:180
+#: controller/buffers/mastodon/community.py:90
 #: controller/buffers/mastodon/conversations.py:99
 #: controller/buffers/mastodon/mentions.py:79
 #: controller/buffers/mastodon/users.py:139
@@ -461,19 +469,19 @@ msgstr "Ne mogu da izdvojim tekst"
 msgid "OCR Result"
 msgstr "Rezultat prepoznavanja"
 
-#: controller/buffers/mastodon/base.py:602
+#: controller/buffers/mastodon/base.py:605
 msgid "this poll no longer exists."
 msgstr "Ova anketa više ne postoji."
 
-#: controller/buffers/mastodon/base.py:605
+#: controller/buffers/mastodon/base.py:608
 msgid "This poll has already expired."
 msgstr "Ova anketa je već završena."
 
-#: controller/buffers/mastodon/base.py:608
+#: controller/buffers/mastodon/base.py:611
 msgid "You have already voted on this poll."
 msgstr "Već ste glasali na ovu anketu."
 
-#: controller/buffers/mastodon/base.py:617
+#: controller/buffers/mastodon/base.py:620
 msgid "Sending vote..."
 msgstr "Slanje ankete..."
 
@@ -494,150 +502,191 @@ msgstr "Obaveštenje odbačeno."
 msgid "There are no more items in this buffer."
 msgstr "Nema više stavki na ovom kalanu."
 
-#: controller/mastodon/handler.py:27 wxUI/dialogs/mastodon/updateProfile.py:34
+#: controller/mastodon/handler.py:29 wxUI/dialogs/mastodon/updateProfile.py:34
 #, fuzzy
 msgid "Update Profile"
 msgstr "Ažuriraj profil"
 
-#: controller/mastodon/handler.py:28 wxUI/dialogs/mastodon/search.py:10
+#: controller/mastodon/handler.py:30 wxUI/dialogs/mastodon/search.py:10
 #: wxUI/view.py:19
 msgid "&Search"
 msgstr "Pretraži"
 
-#: controller/mastodon/handler.py:30 wxUI/view.py:22
+#: controller/mastodon/handler.py:32 wxUI/view.py:22
 msgid "Manage user aliases"
 msgstr "Upravljanje korisničkim nadimcima"
 
-#: controller/mastodon/handler.py:32 controller/mastodon/handler.py:56
+#: controller/mastodon/handler.py:34 controller/mastodon/handler.py:58
 #: wxUI/view.py:30
 msgid "&Post"
 msgstr "&Objavi"
 
-#: controller/mastodon/handler.py:33 wxUI/dialogs/mastodon/menus.py:9
+#: controller/mastodon/handler.py:35 wxUI/dialogs/mastodon/menus.py:9
 #: wxUI/dialogs/mastodon/menus.py:37 wxUI/view.py:31
 msgid "Re&ply"
 msgstr "Odgovori"
 
-#: controller/mastodon/handler.py:34 wxUI/dialogs/mastodon/menus.py:7
+#: controller/mastodon/handler.py:36 wxUI/dialogs/mastodon/menus.py:7
 #: wxUI/dialogs/mastodon/menus.py:35 wxUI/view.py:32
 msgid "&Boost"
 msgstr "&Podeli"
 
-#: controller/mastodon/handler.py:35 wxUI/dialogs/mastodon/menus.py:11
+#: controller/mastodon/handler.py:37 wxUI/dialogs/mastodon/menus.py:11
 #: wxUI/dialogs/mastodon/menus.py:39 wxUI/view.py:33
 msgid "&Add to favorites"
 msgstr "&Dodaj u omiljene"
 
-#: controller/mastodon/handler.py:36
+#: controller/mastodon/handler.py:38
 msgid "Remove from favorites"
 msgstr "Ukloni iz omiljenih"
 
-#: controller/mastodon/handler.py:37 wxUI/dialogs/mastodon/menus.py:21
+#: controller/mastodon/handler.py:39 wxUI/dialogs/mastodon/menus.py:21
 #: wxUI/dialogs/mastodon/menus.py:49 wxUI/view.py:35
 msgid "&Show post"
 msgstr "&Prikaži objavu"
 
-#: controller/mastodon/handler.py:38 wxUI/view.py:36
+#: controller/mastodon/handler.py:40 wxUI/view.py:36
 msgid "View conversa&tion"
 msgstr "Vidi razgovor"
 
-#: controller/mastodon/handler.py:39 wxUI/view.py:37
+#: controller/mastodon/handler.py:41 wxUI/view.py:37
 msgid "Read text in picture"
 msgstr "Čitaj tekst u slici"
 
-#: controller/mastodon/handler.py:40 wxUI/dialogs/mastodon/menus.py:25
+#: controller/mastodon/handler.py:42 wxUI/dialogs/mastodon/menus.py:25
 #: wxUI/view.py:39
 msgid "&Delete"
 msgstr "Izbriši"
 
-#: controller/mastodon/handler.py:42 wxUI/view.py:43
+#: controller/mastodon/handler.py:44 wxUI/view.py:43
 msgid "&Actions..."
 msgstr "Radnje..."
 
-#: controller/mastodon/handler.py:43 wxUI/view.py:44
+#: controller/mastodon/handler.py:45 wxUI/view.py:44
 msgid "&View timeline..."
 msgstr "Vidi vremensku liniju..."
 
-#: controller/mastodon/handler.py:44 wxUI/view.py:45
+#: controller/mastodon/handler.py:46 wxUI/view.py:45
 msgid "Direct me&ssage"
 msgstr "Direktna poruka"
 
-#: controller/mastodon/handler.py:45 wxUI/view.py:46
+#: controller/mastodon/handler.py:47 wxUI/view.py:46
 msgid "Add a&lias"
 msgstr "Dodaj &nadimak"
 
-#: controller/mastodon/handler.py:48
+#: controller/mastodon/handler.py:50
 #, fuzzy
 msgid "Show user profile"
 msgstr "Prikaži profil korisnika"
 
-#: controller/mastodon/handler.py:92
+#: controller/mastodon/handler.py:53
+#: wxUI/dialogs/mastodon/communityTimeline.py:9 wxUI/view.py:55
+msgid "Create community timeline"
+msgstr ""
+
+#: controller/mastodon/handler.py:94
 msgid "Timelines"
 msgstr "Vremenske linije"
 
-#: controller/mastodon/handler.py:104
+#: controller/mastodon/handler.py:106
 msgid "Searches"
 msgstr "Pretrage"
 
-#: controller/mastodon/handler.py:107 controller/mastodon/handler.py:172
-#: controller/mastodon/handler.py:177
+#: controller/mastodon/handler.py:109 controller/mastodon/handler.py:179
+#: controller/mastodon/handler.py:184
 msgid "Search for {}"
 msgstr "Pretraga za {}"
 
-#: controller/mastodon/handler.py:128
+#: controller/mastodon/handler.py:110
+msgid "Communities"
+msgstr ""
+
+#: controller/mastodon/handler.py:113
+msgid "Community for {}"
+msgstr ""
+
+#: controller/mastodon/handler.py:135
 msgid "Conversation with {0}"
 msgstr "Razgovor sa {0}"
 
-#: controller/mastodon/handler.py:277
+#: controller/mastodon/handler.py:284
 msgid "Add an user alias"
 msgstr "Dodaj nadimak za korisnika"
 
-#: controller/mastodon/handler.py:289
+#: controller/mastodon/handler.py:296
 msgid "Alias has been set correctly for {}."
 msgstr "Nadimak za {} je uspešno podešen."
 
-#: controller/mastodon/handler.py:320
+#: controller/mastodon/handler.py:327
 #, fuzzy
 msgid "Update profile"
 msgstr "Ažuriraj profil"
 
-#: controller/mastodon/messages.py:94
+#: controller/mastodon/messages.py:96
 #, python-format
 msgid "%s - %s of %d characters"
 msgstr "%s - %s od %d znakova"
 
-#: controller/mastodon/messages.py:218
+#: controller/mastodon/messages.py:220
 msgid "Poll with {} options"
 msgstr "Anketa sa {} opcija"
 
-#: controller/mastodon/messages.py:242
+#: controller/mastodon/messages.py:246
 msgid "Post from {}"
 msgstr "Objava iz {}"
 
-#: controller/mastodon/messages.py:246 sessions/mastodon/templates.py:78
+#: controller/mastodon/messages.py:250 sessions/mastodon/templates.py:78
 #: wxUI/dialogs/mastodon/postDialogs.py:48
 msgid "Public"
 msgstr "Javna"
 
-#: controller/mastodon/messages.py:246 sessions/mastodon/templates.py:78
+#: controller/mastodon/messages.py:250 sessions/mastodon/templates.py:78
 #: wxUI/dialogs/mastodon/postDialogs.py:48
 msgid "Not listed"
 msgstr "Nije u listi"
 
-#: controller/mastodon/messages.py:246
+#: controller/mastodon/messages.py:250
 msgid "followers only"
 msgstr "Samo pratioci"
 
-#: controller/mastodon/messages.py:246 sessions/mastodon/templates.py:78
+#: controller/mastodon/messages.py:250 sessions/mastodon/templates.py:78
 #: wxUI/dialogs/mastodon/postDialogs.py:48
 msgid "Direct"
 msgstr "Direktna"
 
-#: controller/mastodon/messages.py:253
+#: controller/mastodon/messages.py:257
 msgid "Remote instance"
 msgstr "Udaljena instanca"
 
-#: controller/mastodon/messages.py:276
+#: controller/mastodon/messages.py:266 controller/mastodon/messages.py:294
+#, fuzzy
+msgid "Unmute conversation"
+msgstr "Vidi razgovor"
+
+#: controller/mastodon/messages.py:290 wxUI/dialogs/mastodon/postDialogs.py:231
+#, fuzzy
+msgid "Mute conversation"
+msgstr "Vidi razgovor"
+
+#: controller/mastodon/messages.py:291
+#, fuzzy
+msgid "Conversation unmuted."
+msgstr "Razgovor sa {}"
+
+#: controller/mastodon/messages.py:295
+#, fuzzy
+msgid "Conversation muted."
+msgstr "Razgovor sa {}"
+
+#: controller/mastodon/messages.py:306
+msgid "people who boosted this post"
+msgstr ""
+
+#: controller/mastodon/messages.py:311
+msgid "people who favorited this post"
+msgstr ""
+
+#: controller/mastodon/messages.py:317
 msgid "Link copied to clipboard."
 msgstr "Link kopiran u privremenu memoriju."
 
@@ -950,373 +999,74 @@ msgstr ""
 msgid "Detect automatically"
 msgstr "Otkrij automatski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:41
+#: extra/ocr/OCRSpace.py:7
 msgid "Danish"
 msgstr "danski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:43
+#: extra/ocr/OCRSpace.py:7
 msgid "Dutch"
 msgstr "Holandski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:44
+#: extra/ocr/OCRSpace.py:7
 msgid "English"
 msgstr "engleski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:48
+#: extra/ocr/OCRSpace.py:7
 msgid "Finnish"
 msgstr "finski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:49
+#: extra/ocr/OCRSpace.py:7
 msgid "French"
 msgstr "francuski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:52
+#: extra/ocr/OCRSpace.py:7
 msgid "German"
 msgstr "nemački"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:58
+#: extra/ocr/OCRSpace.py:7
 msgid "Hungarian"
 msgstr "mađarski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:68
+#: extra/ocr/OCRSpace.py:7
 msgid "Korean"
 msgstr "korejski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:63
+#: extra/ocr/OCRSpace.py:7
 msgid "Italian"
 msgstr "italijanski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:64
+#: extra/ocr/OCRSpace.py:7
 msgid "Japanese"
 msgstr "japanski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:85
+#: extra/ocr/OCRSpace.py:7
 msgid "Polish"
 msgstr "poljski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:86
+#: extra/ocr/OCRSpace.py:7
 msgid "Portuguese"
 msgstr "portugalski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:89
+#: extra/ocr/OCRSpace.py:7
 msgid "Russian"
 msgstr "ruski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:96
+#: extra/ocr/OCRSpace.py:7
 msgid "Spanish"
 msgstr "španski"
 
-#: extra/ocr/OCRSpace.py:7 extra/translator/translator.py:105
+#: extra/ocr/OCRSpace.py:7
 msgid "Turkish"
 msgstr "turski"
 
-#: extra/translator/translator.py:22
-msgid "Afrikaans"
-msgstr "Afrički"
-
-#: extra/translator/translator.py:23
-msgid "Albanian"
-msgstr "Albanski"
-
-#: extra/translator/translator.py:24
-msgid "Amharic"
-msgstr "Amharic"
-
-#: extra/translator/translator.py:25
-msgid "Arabic"
-msgstr "arapski"
-
-#: extra/translator/translator.py:26
-msgid "Armenian"
-msgstr "jermenski"
-
-#: extra/translator/translator.py:27
-msgid "Azerbaijani"
-msgstr "azerbejdžanski"
-
-#: extra/translator/translator.py:28
-msgid "Basque"
-msgstr "Baskijski"
-
-#: extra/translator/translator.py:29
-msgid "Belarusian"
-msgstr "Beloruski"
-
-#: extra/translator/translator.py:30
-msgid "Bengali"
-msgstr "Bengalski"
-
-#: extra/translator/translator.py:31
-msgid "Bihari"
-msgstr "Bihari"
-
-#: extra/translator/translator.py:32
-msgid "Bulgarian"
-msgstr "Bugarski"
-
-#: extra/translator/translator.py:33
-msgid "Burmese"
-msgstr "Burmese"
-
-#: extra/translator/translator.py:34
-msgid "Catalan"
-msgstr "Katalonski"
-
-#: extra/translator/translator.py:35
-msgid "Cherokee"
-msgstr "Cherokee"
-
-#: extra/translator/translator.py:36
-msgid "Chinese"
-msgstr "Kineski"
-
-#: extra/translator/translator.py:37
-msgid "Chinese_simplified"
-msgstr "kineski pojednostavljeni"
-
-#: extra/translator/translator.py:38
-msgid "Chinese_traditional"
-msgstr "kineski tradicionalni"
-
-#: extra/translator/translator.py:39
-msgid "Croatian"
-msgstr "hrvatski"
-
-#: extra/translator/translator.py:40
-msgid "Czech"
-msgstr "češki"
-
-#: extra/translator/translator.py:42
-msgid "Dhivehi"
-msgstr "Dhivehi"
-
-#: extra/translator/translator.py:45
-msgid "Esperanto"
-msgstr "Esperanto"
-
-#: extra/translator/translator.py:46
-msgid "Estonian"
-msgstr "estonski"
-
-#: extra/translator/translator.py:47
-msgid "Filipino"
-msgstr "filipinski"
-
-#: extra/translator/translator.py:50
-msgid "Galician"
-msgstr "galicijski"
-
-#: extra/translator/translator.py:51
-msgid "Georgian"
-msgstr "gruzijski"
-
-#: extra/translator/translator.py:53
-msgid "Greek"
-msgstr "grčki"
-
-#: extra/translator/translator.py:54
-msgid "Guarani"
-msgstr "Guarani"
-
-#: extra/translator/translator.py:55
-msgid "Gujarati"
-msgstr "Gujarati"
-
-#: extra/translator/translator.py:56
-msgid "Hebrew"
-msgstr "jevrejski"
-
-#: extra/translator/translator.py:57
-msgid "Hindi"
-msgstr "indijski"
-
-#: extra/translator/translator.py:59
-msgid "Icelandic"
-msgstr "islandski"
-
-#: extra/translator/translator.py:60
-msgid "Indonesian"
-msgstr "indonežanski"
-
-#: extra/translator/translator.py:61
-msgid "Inuktitut"
-msgstr "Inuktitut"
-
-#: extra/translator/translator.py:62
-msgid "Irish"
-msgstr "irski"
-
-#: extra/translator/translator.py:65
-msgid "Kannada"
-msgstr "Kannada"
-
-#: extra/translator/translator.py:66
-msgid "Kazakh"
-msgstr "Kazakh"
-
-#: extra/translator/translator.py:67
-msgid "Khmer"
-msgstr "Khmer"
-
-#: extra/translator/translator.py:69
-msgid "Kurdish"
-msgstr "kurdski"
-
-#: extra/translator/translator.py:70
-msgid "Kyrgyz"
-msgstr "kirgistanski"
-
-#: extra/translator/translator.py:71
-msgid "Laothian"
-msgstr "Laothian"
-
-#: extra/translator/translator.py:72
-msgid "Latvian"
-msgstr "letonski"
-
-#: extra/translator/translator.py:73
-msgid "Lithuanian"
-msgstr "litvanski"
-
-#: extra/translator/translator.py:74
-msgid "Macedonian"
-msgstr "makedonski"
-
-#: extra/translator/translator.py:75
-msgid "Malay"
-msgstr "Malay"
-
-#: extra/translator/translator.py:76
-msgid "Malayalam"
-msgstr "Malayalam"
-
-#: extra/translator/translator.py:77
-msgid "Maltese"
-msgstr "malteški"
-
-#: extra/translator/translator.py:78
-msgid "Marathi"
-msgstr "Marathi"
-
-#: extra/translator/translator.py:79
-msgid "Mongolian"
-msgstr "mongolski"
-
-#: extra/translator/translator.py:80
-msgid "Nepali"
-msgstr "nepalski"
-
-#: extra/translator/translator.py:81
-msgid "Norwegian"
-msgstr "norveški"
-
-#: extra/translator/translator.py:82
-msgid "Oriya"
-msgstr "Oriya"
-
-#: extra/translator/translator.py:83
-msgid "Pashto"
-msgstr "Pashto"
-
-#: extra/translator/translator.py:84
-msgid "Persian"
-msgstr "persijski"
-
-#: extra/translator/translator.py:87
-msgid "Punjabi"
-msgstr "Punjabi"
-
-#: extra/translator/translator.py:88
-msgid "Romanian"
-msgstr "rumunski"
-
-#: extra/translator/translator.py:90
-msgid "Sanskrit"
-msgstr "Sanskrit"
-
-#: extra/translator/translator.py:91
-msgid "Serbian"
-msgstr "srpski"
-
-#: extra/translator/translator.py:92
-msgid "Sindhi"
-msgstr "Sindhi"
-
-#: extra/translator/translator.py:93
-msgid "Sinhalese"
-msgstr "Sinhalese"
-
-#: extra/translator/translator.py:94
-msgid "Slovak"
-msgstr "slovački"
-
-#: extra/translator/translator.py:95
-msgid "Slovenian"
-msgstr "slovenački"
-
-#: extra/translator/translator.py:97
-msgid "Swahili"
-msgstr "Swahili"
-
-#: extra/translator/translator.py:98
-msgid "Swedish"
-msgstr "švedski"
-
-#: extra/translator/translator.py:99
-msgid "Tajik"
-msgstr "Tajik"
-
-#: extra/translator/translator.py:100
-msgid "Tamil"
-msgstr "Tamil"
-
-#: extra/translator/translator.py:101
-msgid "Tagalog"
-msgstr "Tagalog"
-
-#: extra/translator/translator.py:102
-msgid "Telugu"
-msgstr "Telugu"
-
-#: extra/translator/translator.py:103
-msgid "Thai"
-msgstr "Thai"
-
-#: extra/translator/translator.py:104
-msgid "Tibetan"
-msgstr "tibetanski"
-
-#: extra/translator/translator.py:106
-msgid "Ukrainian"
-msgstr "ukrajinski"
-
-#: extra/translator/translator.py:107
-msgid "Urdu"
-msgstr "Urdu"
-
-#: extra/translator/translator.py:108
-msgid "Uzbek"
-msgstr "uzbekitanski"
-
-#: extra/translator/translator.py:109
-msgid "Uighur"
-msgstr "Uighur"
-
-#: extra/translator/translator.py:110
-msgid "Vietnamese"
-msgstr "vijetnamski"
-
-#: extra/translator/translator.py:111
-msgid "Welsh"
-msgstr "velški"
-
-#: extra/translator/translator.py:112
-msgid "Yiddish"
-msgstr "Yiddish"
-
-#: extra/translator/wx_ui.py:29
+#: extra/translator/wx_ui.py:25
 msgid "Translate message"
 msgstr "prevedi poruku"
+
+#: extra/translator/wx_ui.py:29
+#, fuzzy
+msgid "Translation engine"
+msgstr "&Prevedi"
 
 #: extra/translator/wx_ui.py:32
 msgid "Target language"
@@ -1352,7 +1102,7 @@ msgstr "Izbriši prečicu"
 msgid "Execute action"
 msgstr "Izvrši radnju"
 
-#: keystrokeEditor/wx_ui.py:21 wxUI/dialogs/configuration.py:229
+#: keystrokeEditor/wx_ui.py:21 wxUI/dialogs/configuration.py:257
 #: wxUI/dialogs/mastodon/configuration.py:172
 #: wxUI/dialogs/mastodon/showUserProfile.py:170
 #: wxUI/dialogs/userAliasDialogs.py:25
@@ -2050,20 +1800,7 @@ msgstr ""
 msgid "We need your help"
 msgstr "Potrebna nam je vaša pomoć"
 
-#: wxUI/commonMessageDialogs.py:33
-msgid ""
-"TWBlue has detected that you're running windows 10 and has changed the "
-"default keymap to the Windows 10 keymap. It means that some keyboard "
-"shorcuts could be different. Please check the keystroke editor by "
-"pressing Alt+Win+K to see all available keystrokes for this keymap."
-msgstr ""
-"TWBlue je otkrio da koristite windows 10 i promenio je podrazumevane "
-"tasterske prečice na Windows 10 način rada. To znači da neke tasterske "
-"prečice mogu biti drugačije. Molimo vas da proverite uređivač tasterskih "
-"prečica pritiskanjem Alt+Win+K i pogledate sve dostupne prečice za ovaj "
-"način rada."
-
-#: wxUI/commonMessageDialogs.py:33
+#: wxUI/commonMessageDialogs.py:33 wxUI/dialogs/mastodon/postDialogs.py:201
 msgid "Information"
 msgstr "Informacija"
 
@@ -2087,6 +1824,15 @@ msgstr "Upozorenje"
 msgid "Sorry, you can't update while running {} from source."
 msgstr ""
 
+#: wxUI/commonMessageDialogs.py:49
+msgid "the provided instance is invalid. Please try again."
+msgstr ""
+
+#: wxUI/commonMessageDialogs.py:49
+#, fuzzy
+msgid "Invalid instance"
+msgstr "Mastodon instanca"
+
 #: wxUI/sysTrayIcon.py:36 wxUI/view.py:25
 msgid "&Global settings"
 msgstr "Globalna podešavanja"
@@ -2099,7 +1845,7 @@ msgstr "Postavke naloga"
 msgid "&Show / hide"
 msgstr "Prikaži ili sakrij"
 
-#: wxUI/sysTrayIcon.py:40 wxUI/view.py:73
+#: wxUI/sysTrayIcon.py:40 wxUI/view.py:74
 msgid "&Documentation"
 msgstr "Dokumentacija"
 
@@ -2159,111 +1905,111 @@ msgstr "Vidi sviđanja"
 msgid "&Update buffer"
 msgstr "Ažuriraj kanal"
 
-#: wxUI/view.py:55
+#: wxUI/view.py:56
 msgid "New &trending topics buffer..."
 msgstr "Novi kanal sa temama u trendu"
 
-#: wxUI/view.py:56
+#: wxUI/view.py:57
 msgid "Create a &filter"
 msgstr "Napravi &filter"
 
-#: wxUI/view.py:57
+#: wxUI/view.py:58
 msgid "&Manage filters"
 msgstr "&Upravljanje filterima"
 
-#: wxUI/view.py:58
+#: wxUI/view.py:59
 msgid "Find a string in the currently focused buffer..."
 msgstr "Pronađi pojam u trenutno označenom kanalu..."
 
-#: wxUI/view.py:59
+#: wxUI/view.py:60
 msgid "&Load previous items"
 msgstr "Učitaj prethodne stavke"
 
-#: wxUI/dialogs/mastodon/userActions.py:21 wxUI/view.py:61
+#: wxUI/dialogs/mastodon/userActions.py:21 wxUI/view.py:62
 msgid "&Mute"
 msgstr "Utišaj"
 
-#: wxUI/view.py:62
+#: wxUI/view.py:63
 msgid "&Autoread"
 msgstr "Automatski čitaj"
 
-#: wxUI/view.py:63
+#: wxUI/view.py:64
 msgid "&Clear buffer"
 msgstr "Očisti kanal"
 
-#: wxUI/view.py:64
+#: wxUI/view.py:65
 msgid "&Destroy"
 msgstr "Izbriši"
 
-#: wxUI/view.py:68
+#: wxUI/view.py:69
 msgid "&Seek back 5 seconds"
 msgstr "Premotaj unazad za 5 sekundi"
 
-#: wxUI/view.py:69
+#: wxUI/view.py:70
 msgid "&Seek forward 5 seconds"
 msgstr "Premotaj unapred za 5 sekundi"
 
-#: wxUI/view.py:74
+#: wxUI/view.py:75
 msgid "Sounds &tutorial"
 msgstr "Zvučna uputstva"
 
-#: wxUI/view.py:75
+#: wxUI/view.py:76
 msgid "&What's new in this version?"
 msgstr "Šta je novo u ovoj verziji"
 
-#: wxUI/view.py:76
+#: wxUI/view.py:77
 msgid "&Check for updates"
 msgstr "Proveri da li postoje nadogradnje"
 
-#: wxUI/view.py:77
+#: wxUI/view.py:78
 msgid "&Report an error"
 msgstr "Prijavi grešku"
 
-#: wxUI/view.py:78
+#: wxUI/view.py:79
 msgid "{0}'s &website"
 msgstr "{0} &website"
 
-#: wxUI/view.py:79
+#: wxUI/view.py:80
 msgid "Get soundpacks for TWBlue"
 msgstr "Nabavi zvučne pakete za TW Blue"
 
-#: wxUI/view.py:80
+#: wxUI/view.py:81
 msgid "About &{0}"
 msgstr "O &{0}"
 
-#: wxUI/view.py:83
+#: wxUI/view.py:84
 msgid "&Application"
 msgstr "Aplikacija"
 
-#: wxUI/view.py:84
+#: wxUI/view.py:85
 msgid "&Tweet"
 msgstr "Tvit"
 
-#: wxUI/dialogs/mastodon/userActions.py:10 wxUI/view.py:85
+#: wxUI/dialogs/mastodon/userActions.py:10 wxUI/view.py:86
 msgid "&User"
 msgstr "Korisnik"
 
-#: wxUI/view.py:86
+#: wxUI/view.py:87
 msgid "&Buffer"
 msgstr "Kanal"
 
-#: wxUI/view.py:87
+#: wxUI/view.py:88
 msgid "&Audio"
 msgstr "Audio"
 
-#: wxUI/view.py:88
+#: wxUI/view.py:89
 msgid "&Help"
 msgstr "Pomoć"
 
-#: wxUI/view.py:174
+#: wxUI/view.py:175
 msgid "Address"
 msgstr "Adresa"
 
-#: wxUI/view.py:205
+#: wxUI/view.py:206
 msgid "Your {0} version is up to date"
 msgstr "Imate najnoviju verziju {0}."
 
-#: wxUI/view.py:205
+#: wxUI/view.py:206
 msgid "Update"
 msgstr "Ažuriraj"
 
@@ -2289,13 +2035,14 @@ msgstr "Korisnik"
 #: wxUI/buffers/mastodon/conversationList.py:11
 #: wxUI/buffers/mastodon/notifications.py:11
 #: wxUI/dialogs/mastodon/postDialogs.py:36
-#: wxUI/dialogs/mastodon/postDialogs.py:262
+#: wxUI/dialogs/mastodon/postDialogs.py:266
 msgid "Text"
 msgstr "Tekst"
 
 #: wxUI/buffers/mastodon/base.py:11
 #: wxUI/buffers/mastodon/conversationList.py:11
 #: wxUI/buffers/mastodon/notifications.py:11
+#: wxUI/dialogs/mastodon/postDialogs.py:210
 msgid "Date"
 msgstr "Datum"
 
@@ -2462,19 +2209,36 @@ msgstr "Kanal je već na vrhu liste."
 msgid "The buffer is already at the bottom of the list."
 msgstr "Kanal je već na dnu liste."
 
-#: wxUI/dialogs/configuration.py:211
+#: wxUI/dialogs/configuration.py:209
+msgid "LibreTranslate API URL: "
+msgstr ""
+
+#: wxUI/dialogs/configuration.py:215
+msgid "LibreTranslate API Key (optional): "
+msgstr ""
+
+#: wxUI/dialogs/configuration.py:221
+msgid "DeepL API Key: "
+msgstr ""
+
+#: wxUI/dialogs/configuration.py:235
 msgid "{0} preferences"
 msgstr "{0} postavke"
 
-#: wxUI/dialogs/configuration.py:217 wxUI/dialogs/mastodon/configuration.py:144
+#: wxUI/dialogs/configuration.py:241 wxUI/dialogs/mastodon/configuration.py:144
 msgid "General"
 msgstr "opšte"
 
-#: wxUI/dialogs/configuration.py:222
+#: wxUI/dialogs/configuration.py:246
 msgid "Proxy"
 msgstr "Proksi"
 
-#: wxUI/dialogs/configuration.py:227 wxUI/dialogs/mastodon/configuration.py:170
+#: wxUI/dialogs/configuration.py:250
+#, fuzzy
+msgid "Translation services"
+msgstr "&Prevedi"
+
+#: wxUI/dialogs/configuration.py:255 wxUI/dialogs/mastodon/configuration.py:170
 msgid "Save"
 msgstr "Sačuvaj"
 
@@ -2578,6 +2342,47 @@ msgstr "Ukloni korisnički nadimak"
 #: wxUI/dialogs/userAliasDialogs.py:93
 msgid "User alias"
 msgstr "Korisnički nadimak"
+
+#: wxUI/dialogs/userList.py:26
+#, fuzzy
+msgid "View profile"
+msgstr "Ažuriraj profil"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:10
+#, fuzzy
+msgid "Community URL"
+msgstr "Control"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:16
+#: wxUI/dialogs/mastodon/userTimeline.py:18
+msgid "Buffer type"
+msgstr "Vrsta kanala"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:17
+#, fuzzy
+msgid "Local timeline"
+msgstr "Vremenske linije"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:18
+#, fuzzy
+msgid "Federated Timeline"
+msgstr "Vremenska linija korisnika {username}"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:25
+#: wxUI/dialogs/mastodon/search.py:24
+#: wxUI/dialogs/mastodon/updateProfile.py:129
+#: wxUI/dialogs/mastodon/userActions.py:36
+#: wxUI/dialogs/mastodon/userTimeline.py:30
+msgid "&OK"
+msgstr "U redu"
+
+#: wxUI/dialogs/mastodon/communityTimeline.py:27
+#: wxUI/dialogs/mastodon/search.py:26
+#: wxUI/dialogs/mastodon/updateProfile.py:131
+#: wxUI/dialogs/mastodon/userActions.py:38
+#: wxUI/dialogs/mastodon/userTimeline.py:32
+msgid "&Close"
+msgstr "Zatvori"
 
 #: wxUI/dialogs/mastodon/configuration.py:14
 msgid "User autocompletion settings"
@@ -2933,147 +2738,149 @@ msgstr ""
 msgid "Error adding poll"
 msgstr "Greška pri dodavanju ankete"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:169
+#: wxUI/dialogs/mastodon/postDialogs.py:171
 #, python-format
 msgid "Post - %i characters "
 msgstr "objava - %i znakova "
 
-#: wxUI/dialogs/mastodon/postDialogs.py:182
+#: wxUI/dialogs/mastodon/postDialogs.py:194
 msgid "Image description"
 msgstr "Opis slike"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:189
+#: wxUI/dialogs/mastodon/postDialogs.py:204
 msgid "Privacy"
 msgstr "Privatnost"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:194
-msgid "Boosts: "
-msgstr "Deljenja: "
-
-#: wxUI/dialogs/mastodon/postDialogs.py:199
-msgid "Favorites: "
-msgstr "Omiljeni: "
-
-#: wxUI/dialogs/mastodon/postDialogs.py:204
-msgid "Source: "
+#: wxUI/dialogs/mastodon/postDialogs.py:208
+#, fuzzy
+msgid "Source"
 msgstr "Izvor:"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:209
-msgid "Date: "
-msgstr "Datum:"
+#: wxUI/dialogs/mastodon/postDialogs.py:216
+#, fuzzy
+msgid "Boosts"
+msgstr "Deljenja: "
 
-#: wxUI/dialogs/mastodon/postDialogs.py:221
+#: wxUI/dialogs/mastodon/postDialogs.py:218
+msgid "View users who boosted this post"
+msgstr ""
+
+#: wxUI/dialogs/mastodon/postDialogs.py:225
+msgid "View users who favorited this post"
+msgstr ""
+
+#: wxUI/dialogs/mastodon/postDialogs.py:233
 msgid "Copy link to clipboard"
 msgstr "Kopiraj link u privremenu memoriju"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:223
-#: wxUI/dialogs/mastodon/postDialogs.py:270
+#: wxUI/dialogs/mastodon/postDialogs.py:235
+#: wxUI/dialogs/mastodon/postDialogs.py:274
 msgid "Check &spelling..."
 msgstr "Proveri pravopis..."
 
-#: wxUI/dialogs/mastodon/postDialogs.py:224
-#: wxUI/dialogs/mastodon/postDialogs.py:271
+#: wxUI/dialogs/mastodon/postDialogs.py:236
+#: wxUI/dialogs/mastodon/postDialogs.py:275
 msgid "&Translate..."
 msgstr "Prevedi..."
 
-#: wxUI/dialogs/mastodon/postDialogs.py:225
-#: wxUI/dialogs/mastodon/postDialogs.py:272
+#: wxUI/dialogs/mastodon/postDialogs.py:237
+#: wxUI/dialogs/mastodon/postDialogs.py:276
 msgid "C&lose"
 msgstr "Zatvori"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:284
+#: wxUI/dialogs/mastodon/postDialogs.py:288
 msgid "Add a poll"
 msgstr "Dodaj anketu"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:288
+#: wxUI/dialogs/mastodon/postDialogs.py:292
 msgid "Participation time"
 msgstr "Vreme učešća"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "5 minutes"
 msgstr "5 minuta"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "30 minutes"
 msgstr "30 minuta"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "1 hour"
 msgstr "1 sat"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "6 hours"
 msgstr "6 sati"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "1 day"
 msgstr "1 dan"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "2 days"
 msgstr "2 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "3 days"
 msgstr "3 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "4 days"
 msgstr "4 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "5 days"
 msgstr "5 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "6 days"
 msgstr "6 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:290
+#: wxUI/dialogs/mastodon/postDialogs.py:294
 msgid "7 days"
 msgstr "7 dana"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:294
+#: wxUI/dialogs/mastodon/postDialogs.py:298
 msgid "Choices"
 msgstr "Opcije"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:298
+#: wxUI/dialogs/mastodon/postDialogs.py:302
 msgid "Option 1"
 msgstr "Opcija 1"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:305
+#: wxUI/dialogs/mastodon/postDialogs.py:309
 msgid "Option 2"
 msgstr "Opcija 2"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:312
+#: wxUI/dialogs/mastodon/postDialogs.py:316
 msgid "Option 3"
 msgstr "Opcija 3"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:319
+#: wxUI/dialogs/mastodon/postDialogs.py:323
 msgid "Option 4"
 msgstr "Opcija 4"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:324
+#: wxUI/dialogs/mastodon/postDialogs.py:328
 msgid "Allow multiple choices per user"
 msgstr "Dozvoli više glasova po korisniku"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:327
+#: wxUI/dialogs/mastodon/postDialogs.py:331
 msgid "Hide votes count until the poll expires"
 msgstr "Sakrij broj glasova dok se anketa ne završi"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:353
+#: wxUI/dialogs/mastodon/postDialogs.py:357
 msgid "Please make sure you have provided at least two options for the poll."
 msgstr "Molimo uverite se da ste ponudili bar dve opcije u anketi."
 
-#: wxUI/dialogs/mastodon/postDialogs.py:353
+#: wxUI/dialogs/mastodon/postDialogs.py:357
 msgid "Not enough information"
 msgstr "Nema dovoljno informacija"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:358
+#: wxUI/dialogs/mastodon/postDialogs.py:362
 msgid "Vote in this poll"
 msgstr "Glasaj na ovu anketu"
 
-#: wxUI/dialogs/mastodon/postDialogs.py:361
+#: wxUI/dialogs/mastodon/postDialogs.py:365
 msgid "Options"
 msgstr "Opcije"
 
@@ -3084,20 +2891,6 @@ msgstr "Pretraži"
 #: wxUI/dialogs/mastodon/search.py:18
 msgid "Posts"
 msgstr "Objave"
-
-#: wxUI/dialogs/mastodon/search.py:24
-#: wxUI/dialogs/mastodon/updateProfile.py:129
-#: wxUI/dialogs/mastodon/userActions.py:36
-#: wxUI/dialogs/mastodon/userTimeline.py:30
-msgid "&OK"
-msgstr "U redu"
-
-#: wxUI/dialogs/mastodon/search.py:26
-#: wxUI/dialogs/mastodon/updateProfile.py:131
-#: wxUI/dialogs/mastodon/userActions.py:38
-#: wxUI/dialogs/mastodon/userTimeline.py:32
-msgid "&Close"
-msgstr "Zatvori"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:22
 #, fuzzy
@@ -3271,10 +3064,6 @@ msgstr "Odblokiraj"
 #, python-format
 msgid "Timeline for %s"
 msgstr "Vremenska crta od %s"
-
-#: wxUI/dialogs/mastodon/userTimeline.py:18
-msgid "Buffer type"
-msgstr "Vrsta kanala"
 
 #: wxUI/dialogs/mastodon/userTimeline.py:19
 msgid "&Posts"
@@ -4366,4 +4155,257 @@ msgstr "P&raćenja"
 
 #~ msgid "Translated"
 #~ msgstr "Prevedeno"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrički"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanski"
+
+#~ msgid "Amharic"
+#~ msgstr "Amharic"
+
+#~ msgid "Arabic"
+#~ msgstr "arapski"
+
+#~ msgid "Armenian"
+#~ msgstr "jermenski"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "azerbejdžanski"
+
+#~ msgid "Basque"
+#~ msgstr "Baskijski"
+
+#~ msgid "Belarusian"
+#~ msgstr "Beloruski"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengalski"
+
+#~ msgid "Bihari"
+#~ msgstr "Bihari"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Bugarski"
+
+#~ msgid "Burmese"
+#~ msgstr "Burmese"
+
+#~ msgid "Catalan"
+#~ msgstr "Katalonski"
+
+#~ msgid "Cherokee"
+#~ msgstr "Cherokee"
+
+#~ msgid "Chinese"
+#~ msgstr "Kineski"
+
+#~ msgid "Chinese_simplified"
+#~ msgstr "kineski pojednostavljeni"
+
+#~ msgid "Chinese_traditional"
+#~ msgstr "kineski tradicionalni"
+
+#~ msgid "Croatian"
+#~ msgstr "hrvatski"
+
+#~ msgid "Czech"
+#~ msgstr "češki"
+
+#~ msgid "Dhivehi"
+#~ msgstr "Dhivehi"
+
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
+
+#~ msgid "Estonian"
+#~ msgstr "estonski"
+
+#~ msgid "Filipino"
+#~ msgstr "filipinski"
+
+#~ msgid "Galician"
+#~ msgstr "galicijski"
+
+#~ msgid "Georgian"
+#~ msgstr "gruzijski"
+
+#~ msgid "Greek"
+#~ msgstr "grčki"
+
+#~ msgid "Guarani"
+#~ msgstr "Guarani"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Hebrew"
+#~ msgstr "jevrejski"
+
+#~ msgid "Hindi"
+#~ msgstr "indijski"
+
+#~ msgid "Icelandic"
+#~ msgstr "islandski"
+
+#~ msgid "Indonesian"
+#~ msgstr "indonežanski"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Irish"
+#~ msgstr "irski"
+
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgid "Kazakh"
+#~ msgstr "Kazakh"
+
+#~ msgid "Khmer"
+#~ msgstr "Khmer"
+
+#~ msgid "Kurdish"
+#~ msgstr "kurdski"
+
+#~ msgid "Kyrgyz"
+#~ msgstr "kirgistanski"
+
+#~ msgid "Laothian"
+#~ msgstr "Laothian"
+
+#~ msgid "Latvian"
+#~ msgstr "letonski"
+
+#~ msgid "Lithuanian"
+#~ msgstr "litvanski"
+
+#~ msgid "Macedonian"
+#~ msgstr "makedonski"
+
+#~ msgid "Malay"
+#~ msgstr "Malay"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malayalam"
+
+#~ msgid "Maltese"
+#~ msgstr "malteški"
+
+#~ msgid "Marathi"
+#~ msgstr "Marathi"
+
+#~ msgid "Mongolian"
+#~ msgstr "mongolski"
+
+#~ msgid "Nepali"
+#~ msgstr "nepalski"
+
+#~ msgid "Norwegian"
+#~ msgstr "norveški"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Pashto"
+#~ msgstr "Pashto"
+
+#~ msgid "Persian"
+#~ msgstr "persijski"
+
+#~ msgid "Punjabi"
+#~ msgstr "Punjabi"
+
+#~ msgid "Romanian"
+#~ msgstr "rumunski"
+
+#~ msgid "Sanskrit"
+#~ msgstr "Sanskrit"
+
+#~ msgid "Serbian"
+#~ msgstr "srpski"
+
+#~ msgid "Sindhi"
+#~ msgstr "Sindhi"
+
+#~ msgid "Sinhalese"
+#~ msgstr "Sinhalese"
+
+#~ msgid "Slovak"
+#~ msgstr "slovački"
+
+#~ msgid "Slovenian"
+#~ msgstr "slovenački"
+
+#~ msgid "Swahili"
+#~ msgstr "Swahili"
+
+#~ msgid "Swedish"
+#~ msgstr "švedski"
+
+#~ msgid "Tajik"
+#~ msgstr "Tajik"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgid "Tagalog"
+#~ msgstr "Tagalog"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Thai"
+#~ msgstr "Thai"
+
+#~ msgid "Tibetan"
+#~ msgstr "tibetanski"
+
+#~ msgid "Ukrainian"
+#~ msgstr "ukrajinski"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdu"
+
+#~ msgid "Uzbek"
+#~ msgstr "uzbekitanski"
+
+#~ msgid "Uighur"
+#~ msgstr "Uighur"
+
+#~ msgid "Vietnamese"
+#~ msgstr "vijetnamski"
+
+#~ msgid "Welsh"
+#~ msgstr "velški"
+
+#~ msgid "Yiddish"
+#~ msgstr "Yiddish"
+
+#~ msgid ""
+#~ "TWBlue has detected that you're running"
+#~ " windows 10 and has changed the "
+#~ "default keymap to the Windows 10 "
+#~ "keymap. It means that some keyboard "
+#~ "shorcuts could be different. Please "
+#~ "check the keystroke editor by pressing"
+#~ " Alt+Win+K to see all available "
+#~ "keystrokes for this keymap."
+#~ msgstr ""
+#~ "TWBlue je otkrio da koristite windows"
+#~ " 10 i promenio je podrazumevane "
+#~ "tasterske prečice na Windows 10 način"
+#~ " rada. To znači da neke tasterske "
+#~ "prečice mogu biti drugačije. Molimo vas"
+#~ " da proverite uređivač tasterskih prečica"
+#~ " pritiskanjem Alt+Win+K i pogledate sve "
+#~ "dostupne prečice za ovaj način rada."
+
+#~ msgid "Favorites: "
+#~ msgstr "Omiljeni: "
+
+#~ msgid "Date: "
+#~ msgstr "Datum:"
 
