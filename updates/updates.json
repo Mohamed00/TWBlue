@@ -1,5 +1,5 @@
-{"current_version": "2024.01.05",
-"description": "autocompletion for mastodon users, edit and view user profiles, actions for notifications.",
+{"current_version": "2024.05.19",
+"description": "Initial support for GoToSocial instances, mute conversations, local and public timelines from remote instances, translate using LibreTranslate or DeepL and several bugfixes.",
 "date": "unknown",
 "downloads":
 {"Windows32": "https://github.com/MCV-Software/TWBlue/releases/download/release/TWBlue_portable_v2024.01.05.zip",
