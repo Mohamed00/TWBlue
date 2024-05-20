@@ -110,8 +110,10 @@ class Handler(object):
         pub.sendMessage("createBuffer", buffer_type="EmptyBuffer", session_type="base", buffer_title=_("Communities"), parent_tab=root_position, start=False, kwargs=dict(parent=controller.view.nb, name="communities", account=name))
         communities_position =controller.view.search("communities", name)
         for community in session.settings["other_buffers"]["communities"]:
-            pub.sendMessage("createBuffer", buffer_type="CommunityBuffer", session_type=session.type, buffer_title=_("Community for {}").format(community.split("@")[1].replace("https://", "")), parent_tab=communities_position, start=True, kwargs=dict(parent=controller.view.nb, function="timeline", compose_func="compose_post", name=community, sessionObject=session, community_url=community.split("@")[1], account=session.get_name(), sound="search_updated.ogg", timeline=community.split("@")[0]))
-
+            bufftype = _("Local") if community.split("@")[0] == "local" else _("federated")
+            community_name = community.split("@")[1].replace("https://", "")
+            title = _(f"{bufftype} timeline for {community_name}")
+            pub.sendMessage("createBuffer", buffer_type="CommunityBuffer", session_type=session.type, buffer_title=title, parent_tab=communities_position, start=True, kwargs=dict(parent=controller.view.nb, function="timeline", compose_func="compose_post", name=community, sessionObject=session, community_url=community.split("@")[1], account=session.get_name(), sound="search_updated.ogg", timeline=community.split("@")[0]))
 #        for i in session.settings["other_buffers"]["trending_topic_buffers"]:
 #            pub.sendMessage("createBuffer", buffer_type="TrendsBuffer", session_type=session.type, buffer_title=_("Trending topics for %s") % (i), parent_tab=root_position, start=False, kwargs=dict(parent=controller.view.nb, name="%s_tt" % (i,), sessionObject=session, name, trendsFor=i, sound="trends_updated.ogg"))
 
