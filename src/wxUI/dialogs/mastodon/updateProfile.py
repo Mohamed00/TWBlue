@@ -40,14 +40,14 @@ class UpdateProfileDialog(wx.Dialog):
         sizer = wx.BoxSizer(wx.VERTICAL)
 
         # create widgets
-        display_name_label = wx.StaticText(panel, label=_("Display Name"))
+        display_name_label = wx.StaticText(panel, label=_("&Display Name"))
         self.display_name = wx.TextCtrl(panel, value=display_name, style= wx.TE_PROCESS_ENTER, size=(200, 30))
         name_sizer = wx.BoxSizer(wx.HORIZONTAL)
         name_sizer.Add(display_name_label, wx.SizerFlags().Center())
         name_sizer.Add(self.display_name, wx.SizerFlags().Center())
         sizer.Add(name_sizer, wx.CENTER)
 
-        bio_label = wx.StaticText(panel, label=_("Bio"))
+        bio_label = wx.StaticText(panel, label=_("&Bio"))
         self.bio = wx.TextCtrl(panel, value=note, style=wx.TE_PROCESS_ENTER | wx.TE_MULTILINE, size=(400, 60))
         bio_sizer = wx.BoxSizer(wx.HORIZONTAL)
         bio_sizer.Add(bio_label, wx.SizerFlags().Center())
@@ -68,7 +68,7 @@ class UpdateProfileDialog(wx.Dialog):
             self.header_image = wx.StaticBitmap(panel, bitmap=image.ConvertToBitmap())
 
         self.header_image.AcceptsFocusFromKeyboard = return_true
-        self.change_header = wx.Button(panel, label=_("Change header"))
+        self.change_header = wx.Button(panel, label=_("Change &header"))
         header_sizer = wx.BoxSizer(wx.HORIZONTAL)
         header_sizer.Add(header_label, wx.SizerFlags().Center())
         header_sizer.Add(self.header_image, wx.SizerFlags().Center())
@@ -89,7 +89,7 @@ class UpdateProfileDialog(wx.Dialog):
             self.avatar_image = wx.StaticBitmap(panel, bitmap=image.ConvertToBitmap())
 
         self.avatar_image.AcceptsFocusFromKeyboard = return_true
-        self.change_avatar = wx.Button(panel, label=_("Change avatar"))
+        self.change_avatar = wx.Button(panel, label=_("Change &avatar"))
         avatar_sizer = wx.BoxSizer(wx.HORIZONTAL)
         avatar_sizer.Add(avatar_label, wx.SizerFlags().Center())
         avatar_sizer.Add(self.avatar_image, wx.SizerFlags().Center())
@@ -99,7 +99,7 @@ class UpdateProfileDialog(wx.Dialog):
         self.fields = []
         for i in range(1, 5):
             field_sizer = wx.BoxSizer(wx.HORIZONTAL)
-            field_label = wx.StaticText(panel, label=_("Field {}: Label").format(i))
+            field_label = wx.StaticText(panel, label=_("Field &{}: Label").format(i))
             field_sizer.Add(field_label, wx.SizerFlags().Center().Border(wx.ALL, 5))
 
             label_textctrl = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER | wx.TE_MULTILINE, size=(200, 30))
@@ -117,11 +117,11 @@ class UpdateProfileDialog(wx.Dialog):
             sizer.Add(field_sizer, 0, wx.CENTER)
             self.fields.append((label_textctrl, content_textctrl))
 
-        self.locked = wx.CheckBox(panel, label=_("Private account"))
+        self.locked = wx.CheckBox(panel, label=_("&Private account"))
         self.locked.SetValue(locked)
-        self.bot = wx.CheckBox(panel, label=_("Bot account"))
+        self.bot = wx.CheckBox(panel, label=_("&Bot account"))
         self.bot.SetValue(bot)
-        self.discoverable = wx.CheckBox(panel, label=_("Discoverable account"))
+        self.discoverable = wx.CheckBox(panel, label=_("&Discoverable account"))
         self.discoverable.SetValue(discoverable)
         sizer.Add(self.locked, wx.SizerFlags().Expand().Border(wx.ALL, 5))
         sizer.Add(self.bot, wx.SizerFlags().Expand().Border(wx.ALL, 5))
