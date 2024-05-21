@@ -2,6 +2,13 @@ TWBlue Changelog
 
 ## changes in this version
 
+* Mastodon:
+    * fixed an error that caused TWBlue to not display some posts correctly.
+    * Fixed name for community timelines when created during startup. Now it should be clear if it's a federated or local timeline.
+    * Defined shortcuts to fields on the update profile dialog so it will be easier to navigate.
+
+## Changes in version 2024.5.19
+
 In this version of TWBlue, which is being released several months after the previous one, we focused on adding initial support for GoToSocial-type networks. GoToSocial is a server for creating decentralized networks similar to Mastodon. Its API is very similar but retains some differences. In this version, TWBlue can be used to log into GoToSocial accounts, although there will be some features, such as the Streaming API and Markdown support, that are not yet functional. Another significant addition is support for creating community timelines, which will allow you to load the local and public timeline of remote instances. This is useful if your instance does not federate directly with them, as it will allow you to see posts from other communities and interact directly with them. Finally, the translation module has been rewritten; it now supports using LibreTranslate by default and DeepL, for which an API key is required. Below is the detailed list of changes:
 
 * Core:
