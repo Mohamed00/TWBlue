@@ -130,7 +130,12 @@ class Handler(object):
             pub.sendMessage("buffer-title-changed", buffer=buffer)
 
     def open_conversation(self, controller, buffer):
-        post = buffer.get_item()
+        # detect if we are in a community buffer.
+        # Community buffers are special because we'll need to retrieve the object locally at first.
+        if hasattr(buffer, "community_url"):
+            post = buffer.get_item_from_instance()
+        else:
+            post = buffer.get_item()
         if post.reblog != None:
             post = post.reblog
         conversations_position =controller.view.search("direct_messages", buffer.session.get_name())

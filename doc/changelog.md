@@ -6,6 +6,7 @@ TWBlue Changelog
     * fixed an error that caused TWBlue to not display some posts correctly.
     * Fixed name for community timelines when created during startup. Now it should be clear if it's a federated or local timeline.
     * Defined shortcuts to fields on the update profile dialog so it will be easier to navigate.
+    * Now it is possible to load conversations directly from community timelines.
 
 ## Changes in version 2024.5.19
 
