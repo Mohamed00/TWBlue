@@ -23,6 +23,7 @@ MASTODON_VERSION = "4.0.1"
 
 class Session(base.baseSession):
     version_check_mode = "created"
+    name = "Mastodon"
 
     def __init__(self, *args, **kwargs):
         super(Session, self).__init__(*args, **kwargs)
@@ -52,7 +53,7 @@ class Session(base.baseSession):
                 log.debug("Logged.")
                 self.counter = 0
             except MastodonError:
-                log.exception("The login attempt failed.")
+                log.exception(f"The login attempt failed on instance {self.settings['mastodon']['instance']}.")
                 self.logged = False
         else:
             self.logged = False
@@ -241,7 +242,7 @@ class Session(base.baseSession):
         instance = self.settings["mastodon"]["instance"]
         instance = instance.replace("https://", "")
         user = self.settings["mastodon"]["user_name"]
-        return "Mastodon: {}@{}".format(user, instance)
+        return "{}@{} ({})".format(user, instance, self.name)
 
     def start_streaming(self):
         if self.settings["general"]["disable_streaming"]:

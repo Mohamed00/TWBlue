@@ -2,6 +2,8 @@ TWBlue Changelog
 
 ## changes in this version
 
+* Core:
+    * The way sessions are named has been changed. Now the account is indicated first, followed by the social network it belongs to.
 * Mastodon:
     * fixed an error that caused TWBlue to not display some posts correctly.
     * Fixed name for community timelines when created during startup. Now it should be clear if it's a federated or local timeline.
