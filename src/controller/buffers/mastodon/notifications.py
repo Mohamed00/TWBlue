@@ -1,8 +1,11 @@
 ﻿# -*- coding: utf-8 -*-
 import time
 import logging
+import arrow
 import widgetUtils
 import output
+import languageHandler
+import config
 from pubsub import pub
 from controller.buffers.mastodon.base import BaseBuffer
 from controller.mastodon import messages
@@ -38,8 +41,11 @@ class NotificationsBuffer(BaseBuffer):
             original_date = arrow.get(self.session.db[self.name][self.buffer.list.get_selected()].created_at)
             ts = original_date.humanize(locale=languageHandler.getLanguage())
             self.buffer.list.list.SetItem(self.buffer.list.get_selected(), 1, ts)
+        if config.app["app-settings"]["read_long_posts_in_gui"] == True and self.buffer.list.list.HasFocus():
+            output.speak(self.get_message(), interrupt=True)
 
     def bind_events(self):
+        self.buffer.set_focus_function(self.onFocus)
         widgetUtils.connect_event(self.buffer.list.list, widgetUtils.KEYPRESS, self.get_event)
         widgetUtils.connect_event(self.buffer, widgetUtils.BUTTON_PRESSED, self.post_status, self.buffer.post)
         widgetUtils.connect_event(self.buffer, widgetUtils.BUTTON_PRESSED, self.destroy_status, self.buffer.dismiss)

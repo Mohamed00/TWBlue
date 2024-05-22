@@ -406,6 +406,8 @@ class BaseBuffer(base.Buffer):
             original_date = arrow.get(self.session.db[self.name][self.buffer.list.get_selected()].created_at)
             ts = original_date.humanize(locale=languageHandler.getLanguage())
             self.buffer.list.list.SetItem(self.buffer.list.get_selected(), 2, ts)
+        if config.app["app-settings"]["read_long_posts_in_gui"] == True and self.buffer.list.list.HasFocus():
+            output.speak(self.get_message(), interrupt=True)
         if self.session.settings['sound']['indicate_audio'] and utils.is_audio_or_video(post):
             self.session.sound.play("audio.ogg")
         if self.session.settings['sound']['indicate_img'] and utils.is_image(post):

@@ -4,6 +4,8 @@ TWBlue Changelog
 
 * Core:
     * The way sessions are named has been changed. Now the account is indicated first, followed by the social network it belongs to.
+    * An option has been added to the global options dialog that allows for the reading of long posts in the graphical interface. This is especially useful since, by default, the graphical interface can only display a limited number of characters in the post.
+    * Some options that are no longer necessary in the application have been removed from the global settings dialog.
 * Mastodon:
     * fixed an error that caused TWBlue to not display some posts correctly.
     * Fixed name for community timelines when created during startup. Now it should be clear if it's a federated or local timeline.
