@@ -1,18 +1,19 @@
-# Corentin Bacqué-Cazenave <corentin@progaccess.net>, 2022, 2023.
+# Corentin Bacqué-Cazenave <corentin@progaccess.net>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: TW Blue 0.94\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
 "POT-Creation-Date: 2024-05-19 00:54+0000\n"
-"PO-Revision-Date: 2023-08-24 11:50+0000\n"
+"PO-Revision-Date: 2024-05-23 19:15+0000\n"
 "Last-Translator: Corentin Bacqué-Cazenave <corentin@progaccess.net>\n"
+"Language-Team: French <https://weblate.mcvsoftware.com/projects/twblue/"
+"twblue/fr/>\n"
 "Language: fr\n"
-"Language-Team: French "
-"<https://weblate.mcvsoftware.com/projects/twblue/twblue/fr/>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.5.5\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
@@ -43,7 +44,7 @@ msgstr "Russe"
 #: languageHandler.py:66
 msgctxt "languageName"
 msgid "italian"
-msgstr "Italien"
+msgstr "italian"
 
 #: languageHandler.py:67
 msgctxt "languageName"
@@ -95,7 +96,6 @@ msgid "User default"
 msgstr "Utilisateur par défaut"
 
 #: main.py:105
-#, fuzzy
 msgid "https://twblue.mcvsoftware.com/donate"
 msgstr "https://twblue.es/donate"
 
@@ -231,9 +231,8 @@ msgid "Following for {}"
 msgstr "Abonnements de {}"
 
 #: controller/messages.py:18
-#, fuzzy
 msgid "Translated"
-msgstr "&Traduire"
+msgstr "Traduit"
 
 #: controller/settings.py:66
 msgid "System default"
@@ -570,7 +569,6 @@ msgid "Add a&lias"
 msgstr "Ajouter un a&lias"
 
 #: controller/mastodon/handler.py:50
-#, fuzzy
 msgid "Show user profile"
 msgstr "Voir le &profil de l'utilisateur"
 
@@ -610,7 +608,7 @@ msgstr "Ajoute un alias pour l'utilisateur"
 
 #: controller/mastodon/handler.py:296
 msgid "Alias has been set correctly for {}."
-msgstr "L'alias pour {} a correctement été défini"
+msgstr "L'alias pour {} a correctement été définie."
 
 #: controller/mastodon/handler.py:327
 msgid "Update profile"
@@ -641,7 +639,7 @@ msgstr "Non listé"
 
 #: controller/mastodon/messages.py:250
 msgid "followers only"
-msgstr "Seulement les abonnés"
+msgstr "Abonnés uniquement"
 
 #: controller/mastodon/messages.py:250 sessions/mastodon/templates.py:78
 #: wxUI/dialogs/mastodon/postDialogs.py:48
@@ -653,22 +651,18 @@ msgid "Remote instance"
 msgstr "Instance distante"
 
 #: controller/mastodon/messages.py:266 controller/mastodon/messages.py:294
-#, fuzzy
 msgid "Unmute conversation"
 msgstr "Voir conversation"
 
 #: controller/mastodon/messages.py:290 wxUI/dialogs/mastodon/postDialogs.py:231
-#, fuzzy
 msgid "Mute conversation"
 msgstr "Voir conversation"
 
 #: controller/mastodon/messages.py:291
-#, fuzzy
 msgid "Conversation unmuted."
 msgstr "Conversation avec {}"
 
 #: controller/mastodon/messages.py:295
-#, fuzzy
 msgid "Conversation muted."
 msgstr "Conversation avec {}"
 
@@ -682,7 +676,7 @@ msgstr ""
 
 #: controller/mastodon/messages.py:317
 msgid "Link copied to clipboard."
-msgstr "Lien copié dans le Presse-papiers"
+msgstr "Lien copié dans le presse-papiers"
 
 #: controller/mastodon/settings.py:82
 #, python-format
@@ -876,90 +870,80 @@ msgstr "Vérification  orthographique terminée."
 #: extra/autocompletionUsers/completion.py:39
 #: extra/autocompletionUsers/completion.py:57
 msgid "You have to start writing"
-msgstr ""
+msgstr "Vous devez commencer à écrire"
 
 #: extra/autocompletionUsers/completion.py:49
 #: extra/autocompletionUsers/completion.py:66
-#, fuzzy
 msgid "There are no results in your users database"
-msgstr "Il n'y a plus d'élément dans ce tampon."
+msgstr "Il n'y a pas de résultat dans votre base de données d'utilisateurs"
 
 #: extra/autocompletionUsers/completion.py:51
-#, fuzzy
 msgid "Autocompletion only works for users."
-msgstr "Sai&sie automatique utilisateurs"
+msgstr "L'autocomplétion ne fonctionne que pour les utilisateurs"
 
 #: extra/autocompletionUsers/wx_manage.py:9
-#, fuzzy
 msgid "Manage Autocompletion database"
 msgstr "Gérer la base de données d'autocomplétion"
 
 #: extra/autocompletionUsers/wx_manage.py:12
-#, fuzzy
 msgid "Editing {0} users database"
-msgstr "Éditer les alias utilisateur"
+msgstr "Éditer la base de données d'utilisateurs de {0}"
 
 #: extra/autocompletionUsers/wx_manage.py:13
-#, fuzzy
 msgid "Username"
-msgstr "Utilisateur"
+msgstr "Nom d'utilisateur"
 
 #: extra/autocompletionUsers/wx_manage.py:13 wxUI/dialogs/configuration.py:112
 msgid "Name"
 msgstr "Nom"
 
 #: extra/autocompletionUsers/wx_manage.py:16
-#, fuzzy
 msgid "Add user"
-msgstr "Utilisateur"
+msgstr "Ajouter un utilisateur"
 
 #: extra/autocompletionUsers/wx_manage.py:17
-#, fuzzy
 msgid "Remove user"
-msgstr "Supprimer l'alias utilisateur"
+msgstr "Supprimer l'utilisateur"
 
 #: extra/autocompletionUsers/wx_manage.py:38
 msgid "Twitter username"
-msgstr ""
+msgstr "Nom d'utilisateur Twitter"
 
 #: extra/autocompletionUsers/wx_manage.py:38
-#, fuzzy
 msgid "Add user to database"
-msgstr "Ajoute un alias pour l'utilisateur"
+msgstr "Ajoute un utilisateur à la base de données"
 
 #: extra/autocompletionUsers/wx_manage.py:44
-#, fuzzy
 msgid "The user does not exist"
-msgstr "Cet utilisateur n'existe pas"
+msgstr "L'utilisateur n'existe pas"
 
 #: extra/autocompletionUsers/wx_manage.py:44
-#, fuzzy
 msgid "Error!"
-msgstr "Erreur"
+msgstr "Erreur!"
 
 #: extra/autocompletionUsers/mastodon/scan.py:49
 msgid ""
 "Updating database... You can close this window now. A message will tell "
 "you when the process finishes."
 msgstr ""
+"Mise à jour de la base de données… Vous pouvez fermer cette fenêtre. Un "
+"message vous avertira de la fin du processus."
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:8
-#, fuzzy
 msgid "Autocomplete users' settings"
-msgstr "Sai&sie automatique utilisateurs"
+msgstr "Paramètres d'autocomplétion utilisateurs"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:11
 msgid "Add followers to database"
-msgstr ""
+msgstr "Ajouter des abonnés à la base de données"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:12
 msgid "Add  following to database"
 msgstr ""
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:26
-#, fuzzy
 msgid "Updating autocompletion database"
-msgstr "Gérer la base de données d'autocomplétion"
+msgstr "Mise à jour de la base de données d'utilisateurs"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:34
 msgid ""
@@ -980,12 +964,11 @@ msgstr "Attention"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:40
 msgid "TWBlue has imported {} users successfully."
-msgstr ""
+msgstr "TWBlue a importé les utilisateurs {} correctement."
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:40
-#, fuzzy
 msgid "Done"
-msgstr "Terminé !"
+msgstr "Terminé"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:44
 msgid "Error adding users from Mastodon. Please try again in about 15 minutes."
@@ -1060,7 +1043,6 @@ msgid "Translate message"
 msgstr "Traduire le message"
 
 #: extra/translator/wx_ui.py:29
-#, fuzzy
 msgid "Translation engine"
 msgstr "&Traduire"
 
@@ -1218,9 +1200,8 @@ msgid "Open the user actions dialogue"
 msgstr "Ouvrir la boîte de dialogue des actions utilisateur"
 
 #: keystrokeEditor/actions/mastodon.py:18
-#, fuzzy
 msgid "See user details"
-msgstr "Supprimer l'alias utilisateur"
+msgstr "Voir les détails de l'utilisateur"
 
 #: keystrokeEditor/actions/mastodon.py:19
 msgid "Show post"
@@ -1301,8 +1282,7 @@ msgstr "Activer muet / désactiver muet dans la session actuelle"
 #: keystrokeEditor/actions/mastodon.py:41
 msgid "toggle the automatic reading of incoming tweets in the active buffer"
 msgstr ""
-"Activer ou désactiver la lecture automatique des tweets entrants dans le "
-"tampon actuel"
+"Basculer la lecture automatique des nouveaux tweets dans le tampon actif."
 
 #: keystrokeEditor/actions/mastodon.py:42
 msgid "Search on instance"
@@ -1832,7 +1812,6 @@ msgid "the provided instance is invalid. Please try again."
 msgstr ""
 
 #: wxUI/commonMessageDialogs.py:49
-#, fuzzy
 msgid "Invalid instance"
 msgstr "Instance Mastodon"
 
@@ -2241,7 +2220,6 @@ msgid "Proxy"
 msgstr "Proxy"
 
 #: wxUI/dialogs/configuration.py:250
-#, fuzzy
 msgid "Translation services"
 msgstr "&Traduire"
 
@@ -2288,10 +2266,10 @@ msgid ""
 "you can see a list of all available variables in the variables list while"
 " editing your template."
 msgstr ""
-"Le modèle que vous avez spécifié contient des variables qui ne sont pas "
-"disponibles pour cet objet. Veuillez corriger le modèle et réessayer. "
-"Pour votre information, vous pouvez consulter une liste des variables "
-"disponibles dans la liste de variables lorsque vous éditez le modèle."
+"le modèle que vous avez spécifié inclut des variables qui n'existent pas "
+"pour l'élément. Veuillez corriger le modèle et réessayer. Pour référence, "
+"vous pouvez voir une liste de toutes les variables disponibles dans la liste "
+"des variables lors de la modification de votre modèle."
 
 #: wxUI/dialogs/templateDialogs.py:52
 msgid "Invalid template"
@@ -2351,12 +2329,10 @@ msgid "User alias"
 msgstr "Alias utilisateur"
 
 #: wxUI/dialogs/userList.py:26
-#, fuzzy
 msgid "View profile"
 msgstr "Actualiser le profil"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:10
-#, fuzzy
 msgid "Community URL"
 msgstr "Contrôle"
 
@@ -2366,12 +2342,10 @@ msgid "Buffer type"
 msgstr "Type de tampon"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:17
-#, fuzzy
 msgid "Local timeline"
 msgstr "Chronologies"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:18
-#, fuzzy
 msgid "Federated Timeline"
 msgstr "Chronologie de {username}"
 
@@ -2445,7 +2419,7 @@ msgstr "Afficher les noms d'écran au lieu des noms complets"
 
 #: wxUI/dialogs/mastodon/configuration.py:40
 msgid "hide emojis in usernames"
-msgstr "Masquer les emojis dans les noms d'utilisateur"
+msgstr "Cacher les emojis dans les noms d'utilisateur"
 
 #: wxUI/dialogs/mastodon/configuration.py:42
 msgid ""
@@ -2547,8 +2521,8 @@ msgid ""
 "Do you really want to empty this buffer? It's  items will be removed from"
 " the list but not from the instance"
 msgstr ""
-"Êtes vous sûr·e de vouloir vider ce tampon ? Ses éléments seront "
-"supprimés de la liste mais pas de l'instance."
+"Souhaitez-vous vraiment vider ce tampon ? Ses éléments seront supprimés "
+"localement mais pas de l'instance."
 
 #: wxUI/dialogs/mastodon/dialogs.py:38
 msgid "This user has no posts. {0} can't create a timeline."
@@ -2583,7 +2557,6 @@ msgid "&Open URL"
 msgstr "&Ouvrir l'URL"
 
 #: wxUI/dialogs/mastodon/menus.py:17 wxUI/dialogs/mastodon/menus.py:47
-#, fuzzy
 msgid "&Open in instance"
 msgstr "Rechercher sur l'instance"
 
@@ -2600,7 +2573,6 @@ msgid "&User actions..."
 msgstr "&Actions de l'utilisateur..."
 
 #: wxUI/dialogs/mastodon/menus.py:53
-#, fuzzy
 msgid "&Dismiss"
 msgstr "Masqué"
 
@@ -2758,14 +2730,12 @@ msgid "Privacy"
 msgstr "Confidentialité"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:208
-#, fuzzy
 msgid "Source"
-msgstr "Source: "
+msgstr "Source:"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:216
-#, fuzzy
 msgid "Boosts"
-msgstr "Partages : "
+msgstr "Partages :"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:218
 msgid "View users who boosted this post"
@@ -2899,76 +2869,64 @@ msgid "Posts"
 msgstr "Posts"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:22
-#, fuzzy
 msgid "Select user"
-msgstr "Sélectionnez l'URL"
+msgstr "Sélectionner un utilisateur"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:73
-#, fuzzy
 msgid "{}'s Profile"
 msgstr "Actualiser le profil"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:79
-#, fuzzy
 msgid "Name: "
-msgstr "Nom"
+msgstr "Nom "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:84
-#, fuzzy
 msgid "URL: "
 msgstr "Utilisateur: "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:89
-#, fuzzy
 msgid "Bio: "
-msgstr "Bio"
+msgstr "Bio "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:94
 msgid "Joined at: "
 msgstr ""
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:104
-#, fuzzy
 msgid "Header: "
-msgstr "En-tête"
+msgstr "En-tête "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:112
-#, fuzzy
 msgid "Avatar: "
-msgstr "Avatar"
+msgstr "Avatar "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:122
-#, fuzzy
 msgid "Field {} - Label: "
-msgstr "Champ {} : Étiquette"
+msgstr "Champ {} : Étiquette "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:129
-#, fuzzy
 msgid "Content: "
-msgstr "Contenu"
+msgstr "Contenu "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:135
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:135
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:137
-#, fuzzy
 msgid "Private account: "
-msgstr "Compte privé"
+msgstr "Compte privé "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:144
-#, fuzzy
 msgid "Bot account: "
-msgstr "Compte robot"
+msgstr "Compte robot "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:151
-#, fuzzy
 msgid "Discoverable account: "
-msgstr "Compte suggérable"
+msgstr "Compte suggérable "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:157
 msgid "{} posts. Click to open posts timeline"
@@ -4438,4 +4396,3 @@ msgstr "Abo&nnement"
 
 #~ msgid "Date: "
 #~ msgstr "Date: "
-
