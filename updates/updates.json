@@ -1,7 +1,7 @@
-{"current_version": "2024.05.19",
-"description": "Initial support for GoToSocial instances, mute conversations, local and public timelines from remote instances, translate using LibreTranslate or DeepL and several bugfixes.",
+{"current_version": "2024.05.23",
+"description": "Read long posts in GUI, display posts with unicode characters and several buffixes.",
 "date": "unknown",
 "downloads":
-{"Windows32": "https://github.com/MCV-Software/TWBlue/releases/download/v2024.05.19/TWBlue_portable_v2024.05.19.zip",
-"Windows64": "https://github.com/MCV-Software/TWBlue/releases/download/v2024.05.19/TWBlue_portable_v2024.05.19.zip"}
+{"Windows32": "https://github.com/MCV-Software/TWBlue/releases/download/v2024.05.23/TWBlue_portable_v2024.05.23.zip",
+"Windows64": "https://github.com/MCV-Software/TWBlue/releases/download/v2024.05.23/TWBlue_portable_v2024.05.23.zip"}
 }
