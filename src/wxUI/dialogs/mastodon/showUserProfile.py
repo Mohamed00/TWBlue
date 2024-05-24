@@ -76,27 +76,27 @@ class ShowUserProfile(wx.Dialog):
         mainSizer = wx.GridSizer(2, 5, 5)
 
         # create widgets
-        nameLabel = wx.StaticText(self.panel, label=_("Name: "))
+        nameLabel = wx.StaticText(self.panel, label=_("&Name: "))
         name = self.createTextCtrl(user.display_name, size=(200, 30))
         mainSizer.Add(nameLabel, wx.SizerFlags().Center())
         mainSizer.Add(name, wx.SizerFlags().Center())
 
-        urlLabel = wx.StaticText(self.panel, label=_("URL: "))
+        urlLabel = wx.StaticText(self.panel, label=_("&URL: "))
         url = self.createTextCtrl(user.url, size=(200, 30))
         mainSizer.Add(urlLabel, wx.SizerFlags().Center())
         mainSizer.Add(url, wx.SizerFlags().Center())
 
-        bioLabel = wx.StaticText(self.panel, label=_("Bio: "))
+        bioLabel = wx.StaticText(self.panel, label=_("&Bio: "))
         bio = self.createTextCtrl(html_filter(user.note), (400, 60))
         mainSizer.Add(bioLabel, wx.SizerFlags().Center())
         mainSizer.Add(bio, wx.SizerFlags().Center())
 
-        joinLabel = wx.StaticText(self.panel, label=_("Joined at: "))
+        joinLabel = wx.StaticText(self.panel, label=_("&Joined at: "))
         joinText = self.createTextCtrl(user.created_at.strftime('%d %B, %Y'), (80, 30))
         mainSizer.Add(joinLabel, wx.SizerFlags().Center())
         mainSizer.Add(joinText, wx.SizerFlags().Center())
 
-        actions = wx.Button(self.panel, label=_("Actions"))
+        actions = wx.Button(self.panel, label=_("&Actions"))
         actions.Bind(wx.EVT_BUTTON, self.onAction)
         mainSizer.Add(actions, wx.SizerFlags().Center())
 
@@ -119,7 +119,7 @@ class ShowUserProfile(wx.Dialog):
         self.fields = []
         for num, field in enumerate(user.fields):
             labelSizer = wx.BoxSizer(wx.HORIZONTAL)
-            labelLabel = wx.StaticText(self.panel, label=_("Field {} - Label: ").format(num + 1))
+            labelLabel = wx.StaticText(self.panel, label=_("Field &{} - Label: ").format(num + 1))
             labelSizer.Add(labelLabel, wx.SizerFlags().Center().Border(wx.ALL, 5))
             labelText = self.createTextCtrl(html_filter(field.name), (230, 30), True)
             labelSizer.Add(labelText, wx.SizerFlags().Expand().Border(wx.ALL, 5))
@@ -134,40 +134,40 @@ class ShowUserProfile(wx.Dialog):
 
         bullSwitch = {True: _('Yes'), False: _('No'), None: _('No')}
         privateSizer = wx.BoxSizer(wx.HORIZONTAL)
-        privateLabel = wx.StaticText(self.panel, label=_("Private account: "))
+        privateLabel = wx.StaticText(self.panel, label=_("&Private account: "))
         private = self.createTextCtrl(bullSwitch[user.locked], (30, 30))
         privateSizer.Add(privateLabel, wx.SizerFlags().Center())
         privateSizer.Add(private, wx.SizerFlags().Center())
         mainSizer.Add(privateSizer, 0, wx.ALL | wx.CENTER)
 
         botSizer = wx.BoxSizer(wx.HORIZONTAL)
-        botLabel = wx.StaticText(self.panel, label=_("Bot account: "))
+        botLabel = wx.StaticText(self.panel, label=_("&Bot account: "))
         botText = self.createTextCtrl(bullSwitch[user.bot], (30, 30))
         botSizer.Add(botLabel, wx.SizerFlags().Center())
         botSizer.Add(botText, wx.SizerFlags().Center())
         mainSizer.Add(botSizer, 0, wx.ALL | wx.CENTER)
 
         discoverSizer = wx.BoxSizer(wx.HORIZONTAL)
-        discoverLabel = wx.StaticText(self.panel, label=_("Discoverable account: "))
+        discoverLabel = wx.StaticText(self.panel, label=_("&Discoverable account: "))
         discoverText = self.createTextCtrl(bullSwitch[user.discoverable], (30, 30))
         discoverSizer.Add(discoverLabel, wx.SizerFlags().Center())
         discoverSizer.Add(discoverText, wx.SizerFlags().Center())
         mainSizer.Add(discoverSizer, 0, wx.ALL | wx.CENTER)
 
-        posts = wx.Button(self.panel, label=_("{} posts. Click to open posts timeline").format(user.statuses_count))
+        posts = wx.Button(self.panel, label=_("{} p&osts. Click to open posts timeline").format(user.statuses_count))
         # posts.SetToolTip(_("Click to open {}'s posts").format(user.display_name))
         posts.Bind(wx.EVT_BUTTON, self.onPost)
         mainSizer.Add(posts, wx.SizerFlags().Center())
 
-        following = wx.Button(self.panel, label=_("{} following. Click to open Following timeline").format(user.following_count))
+        following = wx.Button(self.panel, label=_("{} &following. Click to open Following timeline").format(user.following_count))
         mainSizer.Add(following, wx.SizerFlags().Center())
         following.Bind(wx.EVT_BUTTON, self.onFollowing)
 
-        followers = wx.Button(self.panel, label=_("{} followers. Click to open followers timeline").format(user.followers_count))
+        followers = wx.Button(self.panel, label=_("{} fo&llowers. Click to open followers timeline").format(user.followers_count))
         mainSizer.Add(followers, wx.SizerFlags().Center())
         followers.Bind(wx.EVT_BUTTON, self.onFollowers)
 
-        close = wx.Button(self.panel, wx.ID_CLOSE, _("Close"))
+        close = wx.Button(self.panel, wx.ID_CLOSE, _("&Close"))
         self.SetEscapeId(close.GetId())
         close.SetDefault()
         wrapperSizer.Add(mainSizer, 0, wx.CENTER)
