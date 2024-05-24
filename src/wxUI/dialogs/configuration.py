@@ -65,7 +65,7 @@ class proxy(wx.Panel, baseDialog.BaseWXDialog):
         typeBox.Add(type, 0, wx.ALL, 5)
         typeBox.Add(self.type, 0, wx.ALL, 5)
         sizer.Add(typeBox, 0, wx.ALL, 5)
-        lbl = wx.StaticText(self, wx.ID_ANY, _(u"Proxy &server: "))
+        lbl = wx.StaticText(self, wx.ID_ANY, _(u"Proxy s&erver: "))
         self.server = wx.TextCtrl(self, -1)
         serverBox = wx.BoxSizer(wx.HORIZONTAL)
         serverBox.Add(lbl, 0, wx.ALL, 5)
