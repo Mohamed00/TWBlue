@@ -259,7 +259,6 @@ class viewPost(post):
             source = source_obj.get("name")
         self.message = postDialogs.viewPost(text=text, boosts_count=boost_count, favs_count=favs_count, source=source, date=date, privacy=privacy)
         participants = [post.account.id] + [account.id for account in post.mentions]
-        print(post, participants)
         if self.session.db["user_id"] in participants:
             self.message.mute.Enable(True)
             if post.muted:
