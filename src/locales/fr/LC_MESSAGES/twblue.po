@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: TW Blue 0.94\n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
 "POT-Creation-Date: 2024-05-19 00:54+0000\n"
-"PO-Revision-Date: 2024-05-23 19:15+0000\n"
+"PO-Revision-Date: 2024-05-25 06:46+0000\n"
 "Last-Translator: Corentin Bacqué-Cazenave <corentin@progaccess.net>\n"
 "Language-Team: French <https://weblate.mcvsoftware.com/projects/twblue/"
 "twblue/fr/>\n"
@@ -575,7 +575,7 @@ msgstr "Voir le &profil de l'utilisateur"
 #: controller/mastodon/handler.py:53
 #: wxUI/dialogs/mastodon/communityTimeline.py:9 wxUI/view.py:55
 msgid "Create community timeline"
-msgstr ""
+msgstr "Créer une chronologie de communauté"
 
 #: controller/mastodon/handler.py:94
 msgid "Timelines"
@@ -592,11 +592,11 @@ msgstr "Recherche de {}"
 
 #: controller/mastodon/handler.py:110
 msgid "Communities"
-msgstr ""
+msgstr "Communautés"
 
 #: controller/mastodon/handler.py:113
 msgid "Community for {}"
-msgstr ""
+msgstr "Communauté pour {}"
 
 #: controller/mastodon/handler.py:135
 msgid "Conversation with {0}"
@@ -668,11 +668,11 @@ msgstr "Conversation avec {}"
 
 #: controller/mastodon/messages.py:306
 msgid "people who boosted this post"
-msgstr ""
+msgstr "personnes qui ont partagé ce post"
 
 #: controller/mastodon/messages.py:311
 msgid "people who favorited this post"
-msgstr ""
+msgstr "personnes qui ont ajouté ce post aux favoris"
 
 #: controller/mastodon/messages.py:317
 msgid "Link copied to clipboard."
@@ -939,7 +939,7 @@ msgstr "Ajouter des abonnés à la base de données"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:12
 msgid "Add  following to database"
-msgstr ""
+msgstr "Ajouter un abonnement à la base de données"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:26
 msgid "Updating autocompletion database"
@@ -956,6 +956,16 @@ msgid ""
 "minutes. If this process ends with no error, you will be redirected back "
 "to the account settings dialog. Do you want to continue?"
 msgstr ""
+"Ce processus récupérera les utilisateurs que vous avez sélectionnés dans "
+"votre compte Mastodon et les ajoutera à la base de données d'autocomplétion "
+"des utilisateurs. Veuillez noter que s'il y a de nombreux utilisateurs ou si "
+"vous avez essayé d'effectuer cette action il y a moins de 15 minutes, TWBlue "
+"peut atteindre une limite d'appels API lors de la tentative de chargement "
+"des utilisateurs dans la base de données. Si cela se produit, nous vous "
+"afficherons une erreur, auquel cas vous devrez réessayer ce processus dans "
+"quelques minutes. Si ce processus se termine sans erreur, vous serez "
+"redirigé vers la boîte de dialogue des paramètres du compte. Voulez-vous "
+"continuer?"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:34
 #: wxUI/commonMessageDialogs.py:20
@@ -973,6 +983,8 @@ msgstr "Terminé"
 #: extra/autocompletionUsers/mastodon/wx_scan.py:44
 msgid "Error adding users from Mastodon. Please try again in about 15 minutes."
 msgstr ""
+"Erreur lors de l'ajout des utilisateurs depuis Mastodon. Veuillez réessayer "
+"dans environ 15 minutes."
 
 #: extra/ocr/OCRSpace.py:7
 msgid "Detect automatically"
@@ -1806,10 +1818,12 @@ msgstr "Attention"
 #: wxUI/commonMessageDialogs.py:45
 msgid "Sorry, you can't update while running {} from source."
 msgstr ""
+"Désolé, vous ne pouvez pas mettre à jour lors de l'exécution depuis les "
+"sources."
 
 #: wxUI/commonMessageDialogs.py:49
 msgid "the provided instance is invalid. Please try again."
-msgstr ""
+msgstr "L'instance fournie est invalide. Veuillez réessayer."
 
 #: wxUI/commonMessageDialogs.py:49
 msgid "Invalid instance"
@@ -2197,15 +2211,15 @@ msgstr "Le tampon est déjà en bas de la liste."
 
 #: wxUI/dialogs/configuration.py:209
 msgid "LibreTranslate API URL: "
-msgstr ""
+msgstr "URL de l'API LibreTranslate : "
 
 #: wxUI/dialogs/configuration.py:215
 msgid "LibreTranslate API Key (optional): "
-msgstr ""
+msgstr "Clé API LibreTranslate (facultatif) : "
 
 #: wxUI/dialogs/configuration.py:221
 msgid "DeepL API Key: "
-msgstr ""
+msgstr "Clé API DeepL : "
 
 #: wxUI/dialogs/configuration.py:235
 msgid "{0} preferences"
@@ -2547,6 +2561,8 @@ msgstr "Cet utilisateur ne suit personne. {0} ne peut pas créer de chronologie.
 #: wxUI/dialogs/mastodon/dialogs.py:60
 msgid "The focused item has no user in it. {} ca't open a user profile"
 msgstr ""
+"L'élément en focus ne contient pas d'utilisateur. {} ne peut pas ouvrir de "
+"profil utilisateur"
 
 #: wxUI/dialogs/mastodon/menus.py:13 wxUI/dialogs/mastodon/menus.py:41
 msgid "R&emove from favorites"
@@ -2739,11 +2755,11 @@ msgstr "Partages :"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:218
 msgid "View users who boosted this post"
-msgstr ""
+msgstr "Voir les utilisateurs ayant partagé ce post"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:225
 msgid "View users who favorited this post"
-msgstr ""
+msgstr "Voir les utilisateurs ayant ajouté ce post aux favoris"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:233
 msgid "Copy link to clipboard"
@@ -2890,7 +2906,7 @@ msgstr "Bio "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:94
 msgid "Joined at: "
-msgstr ""
+msgstr "A rejoint le : "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:104
 msgid "Header: "
@@ -2930,15 +2946,15 @@ msgstr "Compte suggérable "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:157
 msgid "{} posts. Click to open posts timeline"
-msgstr ""
+msgstr "{} posts. Cliquer pour afficher la chronologie des posts."
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:162
 msgid "{} following. Click to open Following timeline"
-msgstr ""
+msgstr "{} abonnements. Cliquer pour afficher la chronologie des abonnements."
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:166
 msgid "{} followers. Click to open followers timeline"
-msgstr ""
+msgstr "{} abonnés. Cliquer pour afficher la chronologie des abonnés."
 
 #: wxUI/dialogs/mastodon/updateProfile.py:42
 msgid "Display Name"
