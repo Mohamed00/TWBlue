@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022 ORGANIZATION
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-# Riku <riku@riku22.net>, 2022, 2023.
+# Riku <riku@riku22.net>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version:  \n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
 "POT-Creation-Date: 2024-06-02 00:55+0000\n"
-"PO-Revision-Date: 2023-10-16 03:58+0000\n"
+"PO-Revision-Date: 2024-06-03 02:46+0000\n"
 "Last-Translator: Riku <riku@riku22.net>\n"
+"Language-Team: Japanese <https://weblate.mcvsoftware.com/projects/twblue/"
+"twblue/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese "
-"<https://weblate.mcvsoftware.com/projects/twblue/twblue/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5.5\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
@@ -98,9 +99,8 @@ msgid "User default"
 msgstr "ユーザーのデフォルト"
 
 #: main.py:105
-#, fuzzy
 msgid "https://twblue.mcvsoftware.com/donate"
-msgstr "https://twblue.es/donate"
+msgstr "https://twblue.mcvsoftware.com/donate"
 
 #: main.py:118
 msgid ""
@@ -226,9 +226,8 @@ msgid "Following for {}"
 msgstr "{}をフォローしているユーザー"
 
 #: controller/messages.py:18
-#, fuzzy
 msgid "Translated"
-msgstr "翻訳(&T)"
+msgstr "翻訳済み"
 
 #: controller/settings.py:60
 msgid "System default"
@@ -572,7 +571,7 @@ msgstr "ユーザーのプロフィールを表示"
 #: controller/mastodon/handler.py:53
 #: wxUI/dialogs/mastodon/communityTimeline.py:9 wxUI/view.py:55
 msgid "Create community timeline"
-msgstr ""
+msgstr "コミュニティのタイムラインを作成"
 
 #: controller/mastodon/handler.py:94
 msgid "Timelines"
@@ -589,10 +588,9 @@ msgstr "{} の検索結果"
 
 #: controller/mastodon/handler.py:110
 msgid "Communities"
-msgstr ""
+msgstr "コミュニティ"
 
 #: controller/mastodon/handler.py:113
-#, fuzzy
 msgid "federated"
 msgstr "連合"
 
@@ -649,32 +647,28 @@ msgid "Remote instance"
 msgstr "リモートインスタンス"
 
 #: controller/mastodon/messages.py:265 controller/mastodon/messages.py:293
-#, fuzzy
 msgid "Unmute conversation"
-msgstr "会話を見る"
+msgstr "会話のミュートを解除"
 
 #: controller/mastodon/messages.py:289 wxUI/dialogs/mastodon/postDialogs.py:232
-#, fuzzy
 msgid "Mute conversation"
-msgstr "会話を見る"
+msgstr "会話をミュート"
 
 #: controller/mastodon/messages.py:290
-#, fuzzy
 msgid "Conversation unmuted."
-msgstr "{0}との会話"
+msgstr "会話のミュートを解除しました。"
 
 #: controller/mastodon/messages.py:294
-#, fuzzy
 msgid "Conversation muted."
-msgstr "{0}との会話"
+msgstr "会話をミュートしました。"
 
 #: controller/mastodon/messages.py:305
 msgid "people who boosted this post"
-msgstr ""
+msgstr "この投稿をブーストした人"
 
 #: controller/mastodon/messages.py:310
 msgid "people who favorited this post"
-msgstr ""
+msgstr "この投稿をお気に入りした人"
 
 #: controller/mastodon/messages.py:316
 msgid "Link copied to clipboard."
@@ -925,7 +919,8 @@ msgstr "エラー！"
 msgid ""
 "Updating database... You can close this window now. A message will tell "
 "you when the process finishes."
-msgstr "データベースを更新しています... このウィンドウは今閉じても大丈夫です。プロセスが完了するとメッセージが表示されます。"
+msgstr "データベースを更新しています... このウィンドウは閉じても大丈夫です。プロセス"
+"が完了するとメッセージが表示されます。"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:8
 msgid "Autocomplete users' settings"
@@ -1041,9 +1036,8 @@ msgid "Translate message"
 msgstr "メッセージを翻訳"
 
 #: extra/translator/wx_ui.py:29
-#, fuzzy
 msgid "Translation engine"
-msgstr "翻訳(&T)"
+msgstr "翻訳エンジン"
 
 #: extra/translator/wx_ui.py:32
 msgid "Target language"
@@ -1772,12 +1766,11 @@ msgstr "申し訳ありませんが、ソースから{}を実行している間�
 
 #: wxUI/commonMessageDialogs.py:49
 msgid "the provided instance is invalid. Please try again."
-msgstr ""
+msgstr "指定されたインスタンスは無効です。もう一度試してください。"
 
 #: wxUI/commonMessageDialogs.py:49
-#, fuzzy
 msgid "Invalid instance"
-msgstr "Mastodonのインスタンス"
+msgstr "無効なインスタンス"
 
 #: wxUI/sysTrayIcon.py:36 wxUI/view.py:25
 msgid "&Global settings"
@@ -2060,7 +2053,7 @@ msgstr "起動時にGUIを隠す"
 
 #: wxUI/dialogs/configuration.py:43
 msgid "Read long posts in GUI"
-msgstr ""
+msgstr "GUIで長い投稿を読む"
 
 #: wxUI/dialogs/configuration.py:46
 msgid "Keymap"
@@ -2146,15 +2139,15 @@ msgstr "既にそのバッファは、リストの最後です。"
 
 #: wxUI/dialogs/configuration.py:205
 msgid "LibreTranslate API URL: "
-msgstr ""
+msgstr "LibreTranslate API URL: "
 
 #: wxUI/dialogs/configuration.py:211
 msgid "LibreTranslate API Key (optional): "
-msgstr ""
+msgstr "LibreTranslate API Key （任意）: "
 
 #: wxUI/dialogs/configuration.py:217
 msgid "DeepL API Key: "
-msgstr ""
+msgstr "DeepL API Key: "
 
 #: wxUI/dialogs/configuration.py:231
 msgid "{0} preferences"
@@ -2169,9 +2162,8 @@ msgid "Proxy"
 msgstr "プロキシ"
 
 #: wxUI/dialogs/configuration.py:246
-#, fuzzy
 msgid "Translation services"
-msgstr "翻訳(&T)"
+msgstr "翻訳サービス"
 
 #: wxUI/dialogs/configuration.py:251 wxUI/dialogs/mastodon/configuration.py:170
 msgid "Save"
@@ -2275,14 +2267,12 @@ msgid "User alias"
 msgstr "ユーザーエイリアス"
 
 #: wxUI/dialogs/userList.py:27
-#, fuzzy
 msgid "View profile"
-msgstr "プロフィールを更新"
+msgstr "プロフィールを見る"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:10
-#, fuzzy
 msgid "Community URL"
-msgstr "コントロール"
+msgstr "コミュニティURLコントロール"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:16
 #: wxUI/dialogs/mastodon/userTimeline.py:18
@@ -2290,14 +2280,12 @@ msgid "Buffer type"
 msgstr "バッファのタイプ"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:17
-#, fuzzy
 msgid "&Local timeline"
-msgstr "タイムライン"
+msgstr "ローカルタイムライン(&L)"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:18
-#, fuzzy
 msgid "&Federated Timeline"
-msgstr "{username} のタイムライン"
+msgstr "連合タイムライン(&F)"
 
 #: wxUI/dialogs/mastodon/communityTimeline.py:25
 #: wxUI/dialogs/mastodon/search.py:24
@@ -2486,9 +2474,8 @@ msgid "&Open URL"
 msgstr "URLを開く(&O)"
 
 #: wxUI/dialogs/mastodon/menus.py:17 wxUI/dialogs/mastodon/menus.py:47
-#, fuzzy
 msgid "&Open in instance"
-msgstr "インスタンスで検索"
+msgstr "インスタンスで開く(&O)"
 
 #: wxUI/dialogs/mastodon/menus.py:19 wxUI/dialogs/mastodon/menus.py:45
 msgid "&Play audio"
@@ -2503,9 +2490,8 @@ msgid "&User actions..."
 msgstr "ユーザーのアクション(&U)"
 
 #: wxUI/dialogs/mastodon/menus.py:53
-#, fuzzy
 msgid "&Dismiss"
-msgstr "却下"
+msgstr "却下(&D)"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:20
 #: wxUI/dialogs/mastodon/postDialogs.py:38
@@ -2656,22 +2642,20 @@ msgid "Privacy"
 msgstr "プライバシー"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:209
-#, fuzzy
 msgid "Source"
-msgstr "ソース: "
+msgstr "ソース"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:217
-#, fuzzy
 msgid "Boosts"
-msgstr "ブースト: "
+msgstr "ブースト"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:219
 msgid "View users who boosted this post"
-msgstr ""
+msgstr "この投稿をブーストしたユーザーを表示"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:226
 msgid "View users who favorited this post"
-msgstr ""
+msgstr "この投稿をお気に入りしたユーザーを表示"
 
 #: wxUI/dialogs/mastodon/postDialogs.py:234
 msgid "Copy link to clipboard"
@@ -2805,29 +2789,24 @@ msgid "{}'s Profile"
 msgstr "{} のプロフィール"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:79
-#, fuzzy
 msgid "&Name: "
-msgstr "名前: "
+msgstr "名前(&N): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:84
-#, fuzzy
 msgid "&URL: "
-msgstr "URL: "
+msgstr "URL(&U): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:89
-#, fuzzy
 msgid "&Bio: "
-msgstr "自己紹介: "
+msgstr "自己紹介(&B): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:94
-#, fuzzy
 msgid "&Joined at: "
-msgstr "参加日: "
+msgstr "参加日(&J): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:99
-#, fuzzy
 msgid "&Actions"
-msgstr "操作"
+msgstr "操作(&A)"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:104
 msgid "Header: "
@@ -2838,9 +2817,8 @@ msgid "Avatar: "
 msgstr "アバター: "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:122
-#, fuzzy
 msgid "Field &{} - Label: "
-msgstr "フィールド {} - ラベル: "
+msgstr "フィールド &{} - ラベル: "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:129
 msgid "Content: "
@@ -2855,86 +2833,72 @@ msgid "No"
 msgstr "いいえ"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:137
-#, fuzzy
 msgid "&Private account: "
-msgstr "承認制アカウント: "
+msgstr "承認制アカウント(&P): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:144
-#, fuzzy
 msgid "&Bot account: "
-msgstr "ボットアカウント: "
+msgstr "ボットアカウント(&B): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:151
-#, fuzzy
 msgid "&Discoverable account: "
-msgstr "発見可能なアカウント: "
+msgstr "発見可能なアカウント(&D): "
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:157
-#, fuzzy
 msgid "{} p&osts. Click to open posts timeline"
-msgstr "{}件の投稿。クリックして投稿のタイムラインを開きます"
+msgstr "{}件の投稿。クリックして投稿のタイムラインを開きます(&O)"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:162
-#, fuzzy
 msgid "{} &following. Click to open Following timeline"
-msgstr "{} フォロー中。クリックしてフォロー中のタイムラインを開きます"
+msgstr "{} フォロー中。クリックしてフォロー中のタイムラインを開きます(&F)"
 
 #: wxUI/dialogs/mastodon/showUserProfile.py:166
-#, fuzzy
 msgid "{} fo&llowers. Click to open followers timeline"
-msgstr "{} フォロワー。クリックしてフォロワーのタイムラインを開きます"
+msgstr "{} フォロワー。クリックしてフォロワーのタイムラインを開きます(&L)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:43
-#, fuzzy
 msgid "&Display Name"
-msgstr "表示名"
+msgstr "表示名(&D)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:50
-#, fuzzy
 msgid "&Bio"
-msgstr "自己紹介"
+msgstr "自己紹介(&B)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:58
 msgid "Header"
 msgstr "ヘッダー"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:71
-#, fuzzy
 msgid "Change &header"
-msgstr "ヘッダーを変更"
+msgstr "ヘッダーを変更(&H)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:79
 msgid "Avatar"
 msgstr "アバター"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:92
-#, fuzzy
 msgid "Change &avatar"
-msgstr "アバターを変更"
+msgstr "アバターを変更(&A)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:102
-#, fuzzy
 msgid "Field &{}: Label"
-msgstr "フィールド {}: ラベル"
+msgstr "フィールド &{}: ラベル"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:110
 msgid "Content"
 msgstr "内容"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:120
-#, fuzzy
 msgid "&Private account"
-msgstr "承認制アカウント"
+msgstr "承認制アカウント(&P)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:122
-#, fuzzy
 msgid "&Bot account"
-msgstr "ボットアカウント"
+msgstr "ボットアカウント(&B)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:124
-#, fuzzy
 msgid "&Discoverable account"
-msgstr "発見可能なアカウント"
+msgstr "発見可能なアカウント(&D)"
 
 #: wxUI/dialogs/mastodon/updateProfile.py:167
 msgid "Select header image - max 2MB"
@@ -4234,4 +4198,3 @@ msgstr "フォロー中(&L)"
 
 #~ msgid "Remember state for mention all and long tweet"
 #~ msgstr "「全員にリプライ」および「ツイートを短縮して投稿」のチェック状態を保持する"
-
