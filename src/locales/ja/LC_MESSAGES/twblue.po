@@ -4,19 +4,18 @@
 # Riku <riku@riku22.net>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: manuel@manuelcortez.net\n"
-"POT-Creation-Date: 2024-06-02 00:55+0000\n"
+"POT-Creation-Date: 2024-06-09 00:55+0000\n"
 "PO-Revision-Date: 2024-06-03 02:46+0000\n"
 "Last-Translator: Riku <riku@riku22.net>\n"
-"Language-Team: Japanese <https://weblate.mcvsoftware.com/projects/twblue/"
-"twblue/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese "
+"<https://weblate.mcvsoftware.com/projects/twblue/twblue/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: languageHandler.py:61
@@ -919,8 +918,7 @@ msgstr "エラー！"
 msgid ""
 "Updating database... You can close this window now. A message will tell "
 "you when the process finishes."
-msgstr "データベースを更新しています... このウィンドウは閉じても大丈夫です。プロセス"
-"が完了するとメッセージが表示されます。"
+msgstr "データベースを更新しています... このウィンドウは閉じても大丈夫です。プロセスが完了するとメッセージが表示されます。"
 
 #: extra/autocompletionUsers/mastodon/wx_scan.py:8
 msgid "Autocomplete users' settings"
@@ -4198,3 +4196,4 @@ msgstr "フォロー中(&L)"
 
 #~ msgid "Remember state for mention all and long tweet"
 #~ msgstr "「全員にリプライ」および「ツイートを短縮して投稿」のチェック状態を保持する"
+
