@@ -12,7 +12,7 @@ class generalAccount(wx.Panel, baseDialog.BaseWXDialog):
         super(generalAccount, self).__init__(parent)
         sizer = wx.BoxSizer(wx.VERTICAL)
         userAutocompletionBox = wx.StaticBox(self, label=_("User autocompletion settings"))
-        self.userAutocompletionScan = wx.Button(self, wx.ID_ANY, _("S&can account and add followers and following users to the user autocompletion database"))
+        self.userAutocompletionScan = wx.Button(self, wx.ID_ANY, _("Scan acc&ount and add followers and following users to the user autocompletion database"))
         self.userAutocompletionManage = wx.Button(self, wx.ID_ANY, _("&Manage autocompletion database"))
         autocompletionSizer = wx.StaticBoxSizer(userAutocompletionBox, wx.HORIZONTAL)
         autocompletionSizer.Add(self.userAutocompletionScan, 0, wx.ALL, 5)
