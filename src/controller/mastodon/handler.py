@@ -144,7 +144,11 @@ class Handler(object):
     def follow(self, buffer):
         if not hasattr(buffer, "get_item"):
             return
-        item = buffer.get_item()
+        # Community buffers are special because we'll need to retrieve the object locally at first.
+        if hasattr(buffer, "community_url"):
+            item = buffer.get_item_from_instance()
+        else:
+            item = buffer.get_item()
         if buffer.type == "user":
             users = [item.acct]
         elif buffer.type == "baseBuffer":
