@@ -164,7 +164,7 @@ class ConversationListBuffer(BaseBuffer):
     def onFocus(self, *args, **kwargs):
         post = self.get_item()
         if config.app["app-settings"]["read_long_posts_in_gui"] == True and self.buffer.list.list.HasFocus():
-            output.speak(self.get_message(), interrupt=True)
+            wx.CallLater(40, output.speak, self.get_message(), interrupt=True)
         if self.session.settings['sound']['indicate_audio'] and utils.is_audio_or_video(post):
             self.session.sound.play("audio.ogg")
         if self.session.settings['sound']['indicate_img'] and utils.is_image(post):

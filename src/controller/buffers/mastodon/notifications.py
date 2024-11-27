@@ -3,6 +3,7 @@ import time
 import logging
 import arrow
 import widgetUtils
+import wx
 import output
 import languageHandler
 import config
@@ -42,7 +43,7 @@ class NotificationsBuffer(BaseBuffer):
             ts = original_date.humanize(locale=languageHandler.getLanguage())
             self.buffer.list.list.SetItem(self.buffer.list.get_selected(), 1, ts)
         if config.app["app-settings"]["read_long_posts_in_gui"] == True and self.buffer.list.list.HasFocus():
-            output.speak(self.get_message(), interrupt=True)
+            wx.CallLater(40, output.speak, self.get_message(), interrupt=True)
 
     def bind_events(self):
         self.buffer.set_focus_function(self.onFocus)
