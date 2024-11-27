@@ -50,7 +50,7 @@ class Handler(object):
             details=_("Show user profile"),
             favs=None,
             # In buffer Menu.
-            community_timeline =_("Create community timeline"),
+            community_timeline =_("Create c&ommunity timeline"),
             filter=None,
             manage_filters=None
         )
