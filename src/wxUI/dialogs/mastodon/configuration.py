@@ -52,7 +52,7 @@ class templates(wx.Panel, baseDialog.BaseWXDialog):
         sizer = wx.BoxSizer(wx.VERTICAL)
         self.post = wx.Button(self, wx.ID_ANY, _("Edit template for &posts. Current template: {}").format(post_template))
         sizer.Add(self.post, 0, wx.ALL, 5)
-        self.conversation = wx.Button(self, wx.ID_ANY, _("Edit template for &conversations. Current template: {}").format(conversation_template))
+        self.conversation = wx.Button(self, wx.ID_ANY, _("Edit template for c&onversations. Current template: {}").format(conversation_template))
         sizer.Add(self.conversation, 0, wx.ALL, 5)
         self.person = wx.Button(self, wx.ID_ANY, _("Edit template for p&ersons. Current template: {}").format(person_template))
         sizer.Add(self.person, 0, wx.ALL, 5)
